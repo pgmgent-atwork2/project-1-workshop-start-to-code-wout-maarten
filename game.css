@@ -7,10 +7,118 @@
 }
 
 input {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    aspect-ratio: 1/1;
     text-align: center;
     font-size: 24px;
     text-transform: uppercase;
     color : black;
+}
+
+.title {
+    font-family: "Smooch Sans", sans-serif;
+    font-size: var(--large-spacing);
+    text-align: center;
+    margin-bottom: var(--medium-spacing);
+}
+
+.block {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: fit-content;
+  border: 2px solid var(--primary-accent-color);
+  background-color: var(--primary-light);
+  border-radius: var(--small-spacing);
+  padding: var(--medium-spacing);
+  font-family: "Oswald", sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--medium-spacing);
+
+  /* & .infoBlockTitle {
+    font-size: var(--medium-spacing);
+    border-bottom: 2px solid var(--primary-accent-color);
+    margin-bottom: var(--small-spacing);
+    font-family: "Smooch Sans", sans-serif;
+    color: var(--primary-accent-color);
+  }
+
+  & .accentText {
+    color: var(--primary-accent-color);
+    font-weight: var(--medium-font-weight);
+  } */
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: "Smooch Sans", sans-serif;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: var(--primary-light);
+  padding: var(--large-spacing);
+  border-radius: var(--small-spacing);
+  border: 2px solid var(--primary-accent-color);
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.modal-content h2 {
+  font-size: var(--large-spacing);
+  margin-bottom: var(--medium-spacing);
+  color: var(--primary-accent-color);
+}
+
+.modal-content p {
+  font-size: 1.5rem;
+  margin-bottom: var(--large-spacing);
+  color: var(--primary-text-color);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: var(--medium-spacing);
+  justify-content: center;
+}
+
+.modal-button {
+  background-color: var(--primary-accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  border-radius: var(--small-spacing);
+  cursor: pointer;
+  font-family: "Smooch Sans", sans-serif;
+  font-weight: var(--medium-font-weight);
+  transition: background-color 0.3s;
+}
+
+.modal-button:hover {
+  background-color: #6fb388;
+}
+
+.modal-button-secondary {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+.modal-button-secondary:hover {
+  background-color: #333333;
 }

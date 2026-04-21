@@ -16,6 +16,7 @@ function lockRow(startIndex) {
     });
 }
 
+
 inputs.forEach((input, i) => {
     input.addEventListener('keydown', e => {
         if (input.disabled) return;
@@ -42,5 +43,25 @@ inputs.forEach((input, i) => {
         }
     });
 
-    input.addEventListener('focus', () => input.select());
+    input.addEventListener('focus', () => {
+        // Check which row this input is in
+        const currentRowStart = Math.floor(i / lettersPerRow) * lettersPerRow;
+        
+        // Find the first non-disabled row
+        let firstEnabledRowStart = 0;
+        for (let row = 0; row < inputs.length; row += lettersPerRow) {
+            if (!inputs[row].disabled) {
+                firstEnabledRowStart = row;
+                break;
+            }
+        }
+        
+        // If this input is in the first enabled row, allow focus and select
+        if (currentRowStart === firstEnabledRowStart) {
+            input.select();
+        } else {
+            // Otherwise, focus the first input of the first enabled row
+            inputs[firstEnabledRowStart].focus();
+        }
+    });
 });

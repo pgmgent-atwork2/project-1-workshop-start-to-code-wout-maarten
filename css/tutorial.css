@@ -25,8 +25,36 @@
     color: var(--primary-accent-color);
   }
 
+  & .infoBlockList {
+    padding-left: var(--medium-spacing);
+    margin-bottom: 0.5rem;
+  }
+
+  & .infoBlockDisclaimer {
+    font-size: 0.9rem;
+    font-style: italic;
+    padding-top: 0.3rem;
+  }
+
   & .accentText {
     color: var(--primary-accent-color);
     font-weight: var(--medium-font-weight);
+  }
+
+  & .infoBlockLink {
+    color: var(--primary-accent-color);
+    text-decoration: none;
+    font-weight: var(--medium-font-weight);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & .infoBlockImage img {
+    max-width: 100%;
+    border-radius: var(--medium-spacing);
+    margin-top: var(--medium-small-spacing);
+    margin-bottom: var(--medium-small-spacing);
   }
 }

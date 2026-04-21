@@ -5,60 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guesser Game</title>
-    <link rel="stylesheet" href="game.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/game.css">
 </head>
 
 <body>
-    <div class="woord" id="input1">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-    </div>
-    <div class="woord" id="input2">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-    </div>
-    <div class="woord" id="input3">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-    </div>
-    <div class="woord" id="input4">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-    </div>
-    <div class="woord" id="input5">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-    </div>
-        <div class="woord" id="input6">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-        <input type="text" inputmode="char" maxlength="1" autocomplete="off">
-    </div>
-
-    <script src="game.js"></script> 
+    <section class="title">
+        <h1>
+            WORDLE GAME
+        </h1>
+    </section>
+    <section class="block">
+        <div class="woord" id="input1">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+        </div>
+        <div class="woord" id="input2">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+        </div>
+        <div class="woord" id="input3">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+        </div>
+        <div class="woord" id="input4">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+        </div>
+        <div class="woord" id="input5">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+        </div>
+            <div class="woord" id="input6">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+            <input type="text" inputmode="char" maxlength="1" autocomplete="off">
+        </div>
+    
+    </section>
+    <script src="./js/game.js"></script> 
 </body>
 
 </html>

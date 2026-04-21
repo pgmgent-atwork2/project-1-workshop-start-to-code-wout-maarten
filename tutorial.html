@@ -282,6 +282,44 @@
         <div class="infoBlockImage">
             <img src="img/img-input-browser.png" alt="afbeelding van de input velden in de browser">
         </div>
+    </div>
+    <div class="infoBlock">
+        <div class="infoBlockTitle">
+            <h2>Stap 5: De CSS toevoegen</h2>
+        </div>
+        <p>Nu gaan we beginnen aan het toevoegen van CSS styling aan onze game. Hiervoor gaan we eerst een apart
+            bestand aanmaken. Dit doen we zoals daarnet bij de index.html maar nu voor css.</p>
+        <p>Dit doe je dus door rechtermuisklik te maken op de map waarin je je project hebt aangemaakt en then "New
+            File" te kiezen.</p>
+        <div class="infoBlockImage">
+            <img src="img/img-creating-css-file.png"
+                alt="afbeelding van het aanmaken van een nieuw CSS bestand in visual studio code">
+        </div>
+        <p>Dit bestand geven we de naam <span class="accentText">"style.css"</span>.</p>
+        <div class="infoBlockImage">
+            <img src="img/img-naming-css.png" alt="afbeelding van de CSS file in visual studio code">
+        </div>
+        <p>Dan klikken we op "Enter" om het bestand te maken. Eenmaal dat dit bestand gemaakt is moeten we dit nog
+            linken met de onze index.html. Dit doen we in de &lt;head&gt; tag van de index.html.
+            Daar voegen we een &lt;link&gt; tag toe met de href attribute ingesteld op "style.css" en zorgen we dat het
+            pad correct ingesteld is. Omdat we hier geen complexe paden gebruiken, is het eenvoudig om het pad correct
+            in te stellen en dienen we alleen bij de href attribute style.css te zetten (maar stel we hadden meer mappen
+            kon dit moeilijker zijn)</p>
+        <div class="copyButton">
+            <button onclick="copyCode('cssLinkSnippet')">Kopieer</button>
+        </div>
+        <pre id="cssLinkSnippet"><code>
+        &lt;link rel="stylesheet" href="style.css"&gt;
+        </code></pre>
+
+        <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we styling toevoegen gaat dit wel
+            werken.</p>
+        <p>Als alles is gelukt ziet de head tag er nu zo uit:</p>
+        <div class="infoBlockImage">
+            <img src="img/img-linked-css.png"
+                alt="afbeelding van de head tag met de link naar de CSS file in visual studio code">
+
+        </div>
 
         <script src=" js/copycode.js"></script>
 </body>

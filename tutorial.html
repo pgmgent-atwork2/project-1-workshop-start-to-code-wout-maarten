@@ -318,10 +318,50 @@
         <div class="infoBlockImage">
             <img src="img/img-linked-css.png"
                 alt="afbeelding van de head tag met de link naar de CSS file in visual studio code">
+        </div>
+        <p>Voordat we kunnen beginnen met het stylen van de titel moeten we eerst het lettertype inladen dit kan op 2
+            manieren. Ofwel kies je om dit lettertype te downloaden en lokaal te gebruiken, ofwel kies je om het
+            lettertype
+            te laden vanaf een externe bron. Wij kiezen de tweede optie. Hiervoor gebruiken we google fonts. Om het op
+            deze manier te doen moeten we een link toevoegen aan de head tag van onze index.html.</p>
+        <div class="copyButton">
+            <button onclick="copyCode('googleFontsSnippet')">Kopieer</button>
+        </div>
+        <pre id="googleFontsSnippet"><code>
+        &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+        &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+        &lt;link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&amp;display=swap" rel="stylesheet"&gt;
+        </code></pre>
 
+        <p> Als we dit kopieren en plakken in onze head van de index.html veranderd er visueel nog niks maar zal dit er
+            zo uit komen te zien:</p>
+        <div class="infoBlockImage">
+            <img src="img/img-google-fonts.png"
+                alt="afbeelding van de head tag met de link naar google fonts in visual studio code">
         </div>
 
-        <script src=" js/copycode.js"></script>
+        <p>Nu kunnen we beginnen met het toevoegen van de CSS styling. We gaan hier beginnen met het centreren van de
+            titel, de titel groter maken, ruimte aan de onderkant geven en het net ingelade lettertype gebruiken.</p>
+        <div class="copyButton">
+            <button onclick="copyCode('titleSnippet')">Kopieer</button>
+        </div>
+        <pre id="titleSnippet"><code>
+        .title {
+            font-family: "Smooch Sans", sans-serif;
+            font-size: 2.5rem;;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        </code></pre>
+        <p><span class="accentText">Wat gebeurd hier nu juist?</span> met de .title kunnen we de eerder toegevoegde
+            class aanspreken. Aan deze class kunnen we dan styling geven. De font-family word gebruikt om het lettertype
+            in te stellen. Ons gekozen lettertype is "Smooch Sans" en we voegen sans-serif als fallback toe moest ons
+            lettertype niet werken. Daarna geven we met font-size toe dit zorgt voor de grote van de titel. We kiezen
+            hier voor 2.5rem dit is een andere notatie dan pixels. Dan te text-align word gebruikt om de titel in het
+            midden van de pagina te zetten. Die margin bottom zorgt voor ruimte aan de onderkant van de titel.</p>
+    </div>
+
+    <script src=" js/copycode.js"></script>
 </body>
 
 </html>

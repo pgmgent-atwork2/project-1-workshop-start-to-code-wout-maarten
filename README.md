@@ -1,1 +1,14 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/wwdUIKJH)
+# Wordle Game - New York Times
+
+## 📝 Projectomschrijving
+Dit project is een implementatie van **Wordle**, het populaire woordspel van de New York Times. 
+Het doel is om het geheime woord in maximaal 6 pogingen te raden. Na elke poging krijg je feedback:
+- 🟩 Groen: letter op juiste plaats
+- 🟨 Geel: letter in woord, verkeerde plaats
+- ⬜ Grijs: letter niet in woord
+
+Dit is een educatief project om HTML, CSS en JavaScript in praktijk toe te passen.
+
+# Link naar figma.
+https://www.figma.com/board/FPvBfDoQn01v2BH07nYlTM/Untitled?node-id=0-1&t=ia7BSRPiTAntZdxu-1
+

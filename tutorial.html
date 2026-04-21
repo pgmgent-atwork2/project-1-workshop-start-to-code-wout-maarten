@@ -368,6 +368,36 @@
         <div class="infoBlockImage">
             <img src="img/img-css-title-browser.png" alt="afbeelding van de titel met CSS styling in de browser">
         </div>
+        <p>Nu komen we aan bij de styling van de input velden. Hierbij gaan we zorgen dat het mooier rechthoekige vakjes
+            zijn waar je automatisch grote letters typt.</p>
+        <div class="copyButton">
+            <button onclick="copyCode('cssInputStyling')">Kopieer</button>
+        </div>
+        <pre id="cssInputStyling"><code>
+        input {
+            width: 4rem;
+            aspect-ratio: 1/1;
+            text-align: center;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: black;
+        }
+        </code></pre>
+        <p><span class="accentText">Wat gebeurd hier nu juist?</span>De width en aspect-ratio zorgen ervoor dat het
+            input veld een rechthoekig formaat heeft. Daarnaast zorg de text align center net zoals bij de titel dat de
+            tekst mooi in het midden van zijn vakje staat en de font size voor de grote van de letters. De tag
+            text-transform: uppercase zorgt ervoor dat de letters automatisch hoofdletters zijn. en dan color: black
+            zorgt dat de letters zwarte kleur hebben.</p>
+        <p>Als je deze code nu in je style.css plaatst, ziet het bestand er zo uit:</p>
+        <div class="infoBlockImage">
+            <img src="img/img-css-input.png"
+                alt="afbeelding van de CSS code voor de input velden in visual studio code">
+        </div>
+        <p>Dan openen we de browser en herladen deze zullen we zien dat de input velden nu mooi rechthoekig zijn en de
+            letters die je er in typt automatisch hoofdletters zijn.</p>
+        <div class="infoBlockImage">
+            <img src="img/img-css-input-browser.png" alt="afbeelding van de input velden met CSS styling in de browser">
+        </div>
     </div>
 
     <script src=" js/copycode.js"></script>

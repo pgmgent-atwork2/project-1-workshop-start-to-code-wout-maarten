@@ -37,6 +37,7 @@ function checkRow(startIndex) {
         if (letter === word[index]) {
             input.classList.add('green');
             greenLetters[letter] = (greenLetters[letter] || 0) + 1;
+            console.log(greenLetters);
         }
     });
     
@@ -69,6 +70,33 @@ function checkRow(startIndex) {
     rowInputs.forEach(input => {
         input.disabled = true;
         input.style.opacity = '0.5';
+    });
+
+    //Step 6: Check for win condition
+    if (Object.keys(greenLetters).length === word.length) {
+            inputs.forEach(input => {
+            input.disabled = true;
+            input.style.opacity = '0.5';
+        });
+        showWinModal();
+    }
+}
+
+function showWinModal() {
+    const modal = document.getElementById('winModal');
+    const winWordElement = document.getElementById('winWord');
+    const closeButton = document.getElementById('closeModal');
+    const tutorialBtn = document.getElementById('tutorialBtn');
+    
+    winWordElement.textContent = word;
+    modal.classList.remove('hidden');
+    
+    closeButton.addEventListener('click', () => {
+        location.reload(); // Reload page to play again
+    });
+    
+    tutorialBtn.addEventListener('click', () => {
+        window.location.href = './tutorial.html'; // Go to tutorial page
     });
 }
 

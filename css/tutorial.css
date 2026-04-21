@@ -4,7 +4,7 @@
   margin-bottom: var(--medium-spacing);
 }
 
-.introduction {
+.infoBlock {
   display: flex;
   flex-direction: column;
   max-width: 62rem;
@@ -15,8 +15,9 @@
   padding: var(--medium-spacing);
   font-family: "Oswald", sans-serif;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--medium-spacing);
 
-  & .introductionTitle {
+  & .infoBlockTitle {
     font-size: var(--medium-spacing);
     border-bottom: 2px solid var(--primary-accent-color);
     margin-bottom: var(--small-spacing);

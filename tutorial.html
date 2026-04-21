@@ -123,9 +123,9 @@
             toevoegen van de basisstructuur van een HTML-document. Dit doe je door de volgende code in je index.html
             bestand te plakken:</p>
         <div class="copyButton">
-            <button onclick="copyCode('codeSnipped')">Kopieer</button>
+            <button onclick="copyCode('codeSnippet')">Kopieer</button>
         </div>
-        <pre id="codeSnipped"><code>&lt;!DOCTYPE html&gt;
+        <pre id="codeSnippet"><code>&lt;!DOCTYPE html&gt;
     &lt;html lang="en"&gt;
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
@@ -167,8 +167,123 @@
                 alt="afbeelding van een witte pagina in de browser met als titel tutorial game">
         </div>
     </div>
+    <div class="infoBlock">
+        <div class="infoBlockTitle">
+            <h2>Stap 4: De HTML toevoegen</h2>
+        </div>
+        <p>Nu gaan we beginnen met het toevoegen van HTML code voor de wordle game dat we gaan maken.</p>
+        <p>Binnen de &lt;body&gt; tags voeg je de HTML toe die je wilt gebruiken voor je game. hier gaan we beginnen met
+            een titel toe te voegen aan deze pagina</p>
+        <div class="copyButton">
+            <button onclick="copyCode('titleSnippet')">Kopieer</button>
+        </div>
+        <pre id="titleSnippet"><code>
+        &lt;section class="title"&gt;
+            &lt;h1&gt;
+                WORDLE GAME
+            &lt;/h1&gt;
+        &lt;/section&gt;
+            </code></pre>
+        <p>Dit zou er nu zo uit moeten zien in visual studio code:</p>
+        <div class="infoBlockImage">
+            <img src="img/img-title-vsc.png" alt="afbeelding van de HTML code voor de titel in visual studio code">
+        </div>
+        <p>En als je dan terug naar de eerder geopende browser tab gaat en deze herlaad zou je dit moeten zien:</p>
+        <div class="infoBlockImage">
+            <img src="img/img-title-browser.png" alt="afbeelding van de titel in de browser">
+        </div>
+        <p><span class="accentText">Wat staat hier nu?</span> De &lt;section&gt; tag is een container voor een specifiek
+            deel van de pagina, en de &lt;h1&gt; tag is een hoofding. Deze h1 mag je maar 1 keer per pagina gebruiken
+            hierna gebruik je namelijk h2, h3, h4, h5, h6. De h1 is namelijk de hoofding van de pagina. De &lt;class&gt;
+            tag is een element dat we later voor het stylen van de titel nodig zullen hebben. De tekst Wordle Game is de
+            titel en deze moet dan tussen de h1 tag staan.</p>
 
-    <script src=" js/copycode.js"></script>
+        <p>Nu gaan we verder met de code voor de tekstvakken waar we de speler letters kunnen invoeren.</p>
+        <p>Dit gaan we doen via de &lt;input&gt; tag. Daarin kan je text invoeren.</p>
+        <div class="copyButton">
+            <button onclick="copyCode('inputSnippet')">Kopieer</button>
+        </div>
+        <pre id="inputSnippet"><code>
+        &lt;section class="block"&gt;
+            &lt;div class="woord" id="input1"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+            &lt;/div&gt;
+            &lt;div class="woord" id="input2"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+            &lt;/div&gt;
+            &lt;div class="woord" id="input3"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+            &lt;/div&gt;
+            &lt;div class="woord" id="input4"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+            &lt;/div&gt;
+            &lt;div class="woord" id="input5"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+            &lt;/div&gt;
+            &lt;div class="woord" id="input6"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+                &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        </code></pre>
+        <p>Dit lijkt misschien ingewikkeld en veel code maar eigenlijk is dit altijd hetzelfde patroon.
+            Wat hier namelijk gebeurd is wederom een section met een class zoals bij de titel. Enkel
+            staat er nu binnen deze section nu andere zaken. Hier staan nu divs met classes en id's in.
+            Binnen deze divs staan dan weer input tags. Deze tags dienen om de tekst in te kunnen voeren en bij
+            deze game hebben we per letter een input nodig. En aangezien we 6 letters per woord hebben en 6 pogingen,
+            hebben we in totaal 36 input tags nodig. Vandaar dat we dit patroon 6 keer herhalen. Iedere div is dus een
+            nieuwe poging tot het raden van het woord.</p>
+        <p><span class="accentText">Hoe werkt zo een input veld
+                juist?</span> Je ziet in zo een input veld verschillende waardes staan namelijk: type, inputmode,
+            maxlength en autocomplete. Deze hebben allemaal een eigen functie. Bij Type staat er nu ="text" dit betekend
+            dat dit een veld voor text is (er zijn namelijk ook nog andere types zoals "number" voor nummers, "email"
+            voor email adressen, etc). Bij inputmode staat er ="char" dit betekend dat we hier karakters willen
+            invoeren. Bij maxlength staat er ="1" dit betekend dat er maar 1 karakter in dit veld mag worden ingevoerd.
+            En bij autocomplete staat er ="off" dit betekend dat de browser geen suggesties mag geven op basis van
+            eerder ingevoerde waarden in dit veld.</p>
+
+        <p>Als we deze code nu kopieren en in visual studio code plakken onder de &lt;/section&gt; tag dan hoort je
+            index.html nu er zo uit te zien:
+        </p>
+        <div class="infoBlockImage">
+            <img src="img/img-input-vsc.png"
+                alt="afbeelding van de HTML code voor de input velden in visual studio code">
+        </div>
+        <p>En als je dan terug naar de eerder geopende browser tab gaat en deze herlaad zou je dit moeten zien:</p>
+        <div class="infoBlockImage">
+            <img src="img/img-input-browser.png" alt="afbeelding van de input velden in de browser">
+        </div>
+
+        <script src=" js/copycode.js"></script>
 </body>
 
 </html>

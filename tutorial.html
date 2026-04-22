@@ -398,9 +398,173 @@
         <div class="infoBlockImage">
             <img src="img/img-css-input-browser.png" alt="afbeelding van de input velden met CSS styling in de browser">
         </div>
+
+        <p>Om de input velden mooi in het midden te krijgen, zullen we volgende code toevoegen aan ons css bestand:</p>
+        <div class="copyButton">
+            <button onclick="copyCode('cssBlock')">Kopieer</button>
+        </div>
+        <pre id="cssBlock"><code>
+            .block {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                width: fit-content;
+                border: 2px solid var(--primary-accent-color);
+                background-color: var(--primary-light);
+                border-radius: var(--small-spacing);
+                padding: var(--medium-spacing);
+                font-family: "Oswald", sans-serif;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                margin-bottom: var(--medium-spacing);
+            }
+        </code></pre>
+        <p>De eerste 5 elementen in .block zullen de game in het midden van de pagina uilijnen. </p>
+        <p>de rest heeft vooral te maken met de rand van het veld, je kan hier meer over opzoeken op het internet.</p>
+        <div class="infoBlockImage">
+            <img src="img/img-css-block.png" alt="afbeelding van de input velden met CSS styling in de browser">
+        </div>
+        <p>Als je deze code nu in je style.css plaatst, ziet het bestand er zo uit:</p>
+        <div class="infoBlockImage">
+            <img src="img/img-wordel-view-leeg.png" alt="afbeelding van de input velden met CSS styling in de browser">
+        </div>
+
     </div>
+    <div class="infoBlock">
+        <div class="infoBlockTitle">
+            <h2>Stap 6: functionaliteit: JavaScript</h2>
+        </div>
+        <p>nu gaan we de functionaliteit toevoegen met JavaScript.</p>
+
+        om te beginnen moeten we een nieuw bestand aanmaken voor onze JavaScript code. Dit doen we op dezelfde manier als bij de index.html en style.css maar nu geven we het bestand de naam <span class="accentText">"script.js"</span>.
+        <p>Eenmaal dat dit bestand gemaakt is moeten we dit nog linken met de onze index.html. Dit doen we net zoals bij de CSS maar nu voegen we een &lt;script&gt; tag toe aan het einde van de body van onze index.html.</p>
+        <div class="copyButton">
+            <button onclick="copyCode('jsLinkSnippet')">Kopieer</button>
+        </div>
+        <pre id="jsLinkSnippet"><code>
+            &lt;script src="js/script.js"&gt;&lt;/script&gt;
+        </code></pre>
+        <div class="infoBlockImage">
+            <img src="img/img-js-add-to-html.png" alt="afbeelding van de script tag in de index.html">
+        </div>
+        <p>we adden op het laatse alse de pagina geladen is; dus net voor de body end.</p>
+        <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we functionaliteit toevoegen gaat dit wel
+            werken.</p>
+
+        <div class="infoBlockImage">
+            <img src="img\img-import-inputs.png" alt="">
+        </div>
+        <p>import alls inputs van de html zodat we ze kunnen gebruiken in onze JavaScript code. (dit is de aller eerste lijn code)</p>
 
     <script src=" js/copycode.js"></script>
+
+
+
+
+<div>
+<br>
+    <h3>De interactie met de velden</h3>
+    <h4>De 3 Event Listeners Uitgelegd</h4>
+    <p>
+        Denk aan event listeners als "wachters" die luisteren naar bepaalde dingen die gebeuren, en daar dan op reageren.
+    </p>
+    <br>
+    <p>
+        <h5>
+            1. keydown listener - Luistert wanneer je toetsen indrukt
+        </h5>
+        <div class="infoBlockImage">
+            <img src="img/img-event-lissener-1.png" alt="">
+        </div>
+        Wat het doet:
+        <ul>
+            <li>
+                Backspace-toets: Verwijdert de huidige letter. Als het vakje leeg is, gaat het terug naar het vorige vakje en verwijdert die letter.
+            </li>
+            <li>
+                Linker Pijl-toets: Gaat naar het vorige vakje (zoals naar achteren gaan).
+            </li>
+            <li>
+                Rechter Pijl-toets: Gaat naar het volgende vakje (zoals naar voren gaan).
+            </li>
+            
+            
+        </ul>
+        <i>
+            Real-world voorbeeld: Alsof een leraar kijkt welke toetsen je indrukt en daar op reageert.
+        </i> 
+    </p>
+    <br>
+    <p>
+        <h5>
+            2. input listener - Luistert wanneer je een letter typt
+            Wat het doet:
+              
+        </h5>
+
+        <ul>
+            <li>
+                    Staat alleen letters toe (geen nummers of symbolen).
+            </li>
+            <li>
+                    Gaat automatisch naar het volgende vakje als je een letter typt.
+            </li>
+            <li>
+                Controleert of de rij compleet is (alle 6 vakjes ingevuld).
+            </li>
+            <li>
+                Als de rij compleet is, controleert het of je gok correct is en gaat naar de volgende rij vakjes.
+            </li>
+        </ul>
+        <i>
+            Real-world voorbeeld: Alsof een helper je werk controleert zodra je elke regel afmaakt.
+        </i>
+        <br>
+        <br>
+        <p>maar voor we dit doen moeten we eerst 2 funties schrijven, dit zijn stuckjes code die we kunnen hergebruiken. (we zullen deze functies ook nog uitbrijden voor meer funtionaliteit) </p>
+        <div class="infoBlockImage">
+            <img src="img\img-event-lissener-top-2.png" alt="">
+        </div>
+        <p>
+            nu we de fucties hebben kunnen we de input listener schrijven. Deze zal er als volgt uit zien (deze komt onder de keydown event listener binnen de input.foreach loop):
+        </p>
+        <div class="infoBlockImage">
+            <img src="img\img-event-lissener-2.png" alt="">
+        </div>
+
+    </p>
+    <br>
+    <b>Wat we nu hebben gemaakt:</b>
+    <div class="infoBlockImage">
+            <img src="img\img-event-lissener-resultaat-2.png" alt="">
+        </div>
+    <i>maar we willen natuurlijk dat we niet overal letters kunnen typen dus voegen we nog een listener toe:</i>
+    <br>
+    <br>
+    <p>
+        <h5>
+            3. focus listener - Luistert wanneer je op een vakje klikt
+            Wat het doet:
+        </h5>
+    <ul>
+        <li>Voorkomt dat je op afgeronde rijen klikt (al geraden).</li>
+        <li>Houdt je gericht op de huidige rij waar je in tikt.</li>
+        <li>Als je op een oude rij klikt, brengt het je terug naar de rij waar je aan werkt.</li>
+    </ul>
+    <i>
+        Real-world voorbeeld: Zoals een portier bij een club die je alleen in de rij laat waar je hoort te zijn.
+    </i>
+
+    </p>
+    <div class="infoBlockImage">
+        <img src="img\img-event-lissener-2.png" alt="">
+    </div>
+    <b>Wat we nu hebben gemaakt:</b>
+    <div class="infoBlockImage">
+        <img src="img\img-event-lissener-resultaat-3.png" alt="">
+    </div>
+</div>
+
 </body>
 
 </html>

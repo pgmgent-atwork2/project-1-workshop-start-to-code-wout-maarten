@@ -1,25 +1,6 @@
 const inputs = [...document.querySelectorAll('.woord input')];
 const lettersPerRow = 6;
 
-let word = '';
-
-// Load and get random word from words.json
-async function loadRandomWord() {
-    // try {
-    //     const response = await fetch('./words.json');
-    //     const data = await response.json();
-    //     const wordList = data.words;
-    //     word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
-    //     console.log('Secret word loaded:', word);
-    // } catch (error) {
-    //     console.error('Error loading words:', error);
-    // }
-    word = 'ADVIES';
-}
-
-// Load the word when page loads
-loadRandomWord();
-
 function isRowComplete(startIndex) {
     const endIndex = startIndex + lettersPerRow;
     const rowInputs = inputs.slice(startIndex, endIndex);
@@ -29,76 +10,79 @@ function isRowComplete(startIndex) {
 function checkRow(startIndex) {
     const endIndex = startIndex + lettersPerRow;
     const rowInputs = inputs.slice(startIndex, endIndex);
-    
-    // STEP 1: Mark GREEN letters (correct position)
-    const greenLetters = {};
-    rowInputs.forEach((input, index) => {
-        const letter = input.value.toUpperCase();
-        if (letter === word[index]) {
-            input.classList.add('green');
-            greenLetters[letter] = (greenLetters[letter] || 0) + 1;
-            console.log(greenLetters);
-        }
-    });
-    
-    // STEP 2: Count all letters in secret word
-    const availableLetters = {};
-    for (let i = 0; i < word.length; i++) {
-        const letter = word[i];
-        availableLetters[letter] = (availableLetters[letter] || 0) + 1;
-    }
-    
-    // STEP 3: Remove greens from available pool (avoid double-counting)
-    for (let letter in greenLetters) {
-        availableLetters[letter] -= greenLetters[letter];
-    }
-    
-    // STEP 4: Mark ORANGE letters (wrong position, but in word)
-    rowInputs.forEach((input, index) => {
-        const letter = input.value.toUpperCase();
-        
-        if (input.classList.contains('green')) return; // Skip greens
-        
-        // If letter still available, mark orange and use one instance
-        if (availableLetters[letter] && availableLetters[letter] > 0) {
-            input.classList.add('orange');
-            availableLetters[letter]--;
-        }
-    });
-    
-    // STEP 5: Disable and fade row
+
+    //     // STEP 5: Disable and fade row
     rowInputs.forEach(input => {
         input.disabled = true;
         input.style.opacity = '0.5';
     });
-
-    //Step 6: Check for win condition
-    if (Object.keys(greenLetters).length === word.length) {
-            inputs.forEach(input => {
-            input.disabled = true;
-            input.style.opacity = '0.5';
-        });
-        showWinModal();
-    }
 }
+    
+//     // STEP 1: Mark GREEN letters (correct position)
+//     const greenLetters = {};
+//     rowInputs.forEach((input, index) => {
+//         const letter = input.value.toUpperCase();
+//         if (letter === word[index]) {
+//             input.classList.add('green');
+//             greenLetters[letter] = (greenLetters[letter] || 0) + 1;
+//             console.log(greenLetters);
+//         }
+//     });
+    
+//     // STEP 2: Count all letters in secret word
+//     const availableLetters = {};
+//     for (let i = 0; i < word.length; i++) {
+//         const letter = word[i];
+//         availableLetters[letter] = (availableLetters[letter] || 0) + 1;
+//     }
+    
+//     // STEP 3: Remove greens from available pool (avoid double-counting)
+//     for (let letter in greenLetters) {
+//         availableLetters[letter] -= greenLetters[letter];
+//     }
+    
+//     // STEP 4: Mark ORANGE letters (wrong position, but in word)
+//     rowInputs.forEach((input, index) => {
+//         const letter = input.value.toUpperCase();
+        
+//         if (input.classList.contains('green')) return; // Skip greens
+        
+//         // If letter still available, mark orange and use one instance
+//         if (availableLetters[letter] && availableLetters[letter] > 0) {
+//             input.classList.add('orange');
+//             availableLetters[letter]--;
+//         }
+//     });
+    
 
-function showWinModal() {
-    const modal = document.getElementById('winModal');
-    const winWordElement = document.getElementById('winWord');
-    const closeButton = document.getElementById('closeModal');
-    const tutorialBtn = document.getElementById('tutorialBtn');
+
+//     //Step 6: Check for win condition
+//     if (Object.keys(greenLetters).length === word.length) {
+//             inputs.forEach(input => {
+//             input.disabled = true;
+//             input.style.opacity = '0.5';
+//         });
+//         showWinModal();
+//     }
+// }
+
+// function showWinModal() {
+//     const modal = document.getElementById('winModal');
+//     const winWordElement = document.getElementById('winWord');
+//     const closeButton = document.getElementById('closeModal');
+//     const tutorialBtn = document.getElementById('tutorialBtn');
     
-    winWordElement.textContent = word;
-    modal.classList.remove('hidden');
+//     winWordElement.textContent = word;
+//     modal.classList.remove('hidden');
     
-    closeButton.addEventListener('click', () => {
-        location.reload(); // Reload page to play again
-    });
+//     closeButton.addEventListener('click', () => {
+//         location.reload(); // Reload page to play again
+//     });
     
-    tutorialBtn.addEventListener('click', () => {
-        window.location.href = './tutorial.html'; // Go to tutorial page
-    });
-}
+//     tutorialBtn.addEventListener('click', () => {
+//         window.location.href = './tutorial.html'; // Go to tutorial page
+//     });
+// }
 
 
 inputs.forEach((input, i) => {

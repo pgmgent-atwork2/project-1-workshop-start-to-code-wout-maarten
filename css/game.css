@@ -35,6 +35,7 @@ input {
   font-family: "Oswald", sans-serif;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: var(--medium-spacing);
+}
 
   /* & .infoBlockTitle {
     font-size: var(--medium-spacing);

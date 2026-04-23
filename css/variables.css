@@ -5,10 +5,12 @@
   --primary-text-color: #383636;
   --primary-accent-color: #88c59f;
 
+  --xs-spacing: 0.5rem;
   --small-spacing: 1rem;
   --medium-small-spacing: 1.5rem;
   --medium-spacing: 2rem;
   --large-spacing: 2.5rem;
+  --xxl-spacing: 4rem;
 
   --medium-font-weight: 600;
 }

@@ -112,13 +112,22 @@
         <div class="infoBlockImage">
             <img src="img/img-finish-projectsetup.png" alt="afbeelding van de project structuur in visual studio code">
         </div>
+        <p>Maar voordat we kunnen beginnen moeten we nog een extensie installeren. Deze zal er voor zorgen dat alles
+            netjes inlaadt in de browser. Dit kan je doen door links in visual studio code te klikken op het icon van
+            extensions (lijkt op 4 vierkanten). Eenmaal daarop klikt can je bovenaan in de zoekbalk <span
+                class="accentText">"Live Server"</span> typen en deze installeren.</p>
+        <div class="infoBlockImage">
+            <img src="img/img-install-liveserver.png"
+                alt="afbeelding van het installeren van de live server extensie in visual studio code">
+        </div>
     </div>
 
     <div class="infoBlock">
         <div class="infoBlockTitle">
             <h2>Stap 2: HTML structuur maken</h2>
         </div>
-        <p>Nu we ons project hebben opgezet, kunnen we beginnen met het schrijven van onze HTML-code. We beginnen met
+        <p>Nu we ons project hebben opgezet, kunnen we beginnen met het schrijven van onze HTML-code. We beginnen
+            met
             het
             toevoegen van de basisstructuur van een HTML-document. Dit doe je door de volgende code in je index.html
             bestand te plakken:</p>
@@ -137,7 +146,8 @@
     &lt;/body&gt;
     &lt;/html&gt;</code></pre>
 
-        <p><span class="accentText">Wat doet dit nu allemaal?</span> De &lt;html&gt; tag is de basis van je pagina. In
+        <p><span class="accentText">Wat doet dit nu allemaal?</span> De &lt;html&gt; tag is de basis van je pagina.
+            In
             de &lt;head&gt;
             staan onzichtbare instellingen zoals de &lt;meta&gt; charset voor speciale tekens en de
             &lt;title&gt; voor je browsertab (de naam dat bovenaan bij een website staat). Alles wat je uiteindelijk
@@ -172,7 +182,8 @@
             <h2>Stap 4: De HTML toevoegen</h2>
         </div>
         <p>Nu gaan we beginnen met het toevoegen van HTML code voor de wordle game dat we gaan maken.</p>
-        <p>Binnen de &lt;body&gt; tags voeg je de HTML toe die je wilt gebruiken voor je game. hier gaan we beginnen met
+        <p>Binnen de &lt;body&gt; tags voeg je de HTML toe die je wilt gebruiken voor je game. hier gaan we beginnen
+            met
             een titel toe te voegen aan deze pagina</p>
         <div class="copyButton">
             <button onclick="copyCode('titleSnippet')">Kopieer</button>
@@ -192,10 +203,14 @@
         <div class="infoBlockImage">
             <img src="img/img-title-browser.png" alt="afbeelding van de titel in de browser">
         </div>
-        <p><span class="accentText">Wat staat hier nu?</span> De &lt;section&gt; tag is een container voor een specifiek
-            deel van de pagina, en de &lt;h1&gt; tag is een hoofding. Deze h1 mag je maar 1 keer per pagina gebruiken
-            hierna gebruik je namelijk h2, h3, h4, h5, h6. De h1 is namelijk de hoofding van de pagina. De &lt;class&gt;
-            tag is een element dat we later voor het stylen van de titel nodig zullen hebben. De tekst Wordle Game is de
+        <p><span class="accentText">Wat staat hier nu?</span> De &lt;section&gt; tag is een container voor een
+            specifiek
+            deel van de pagina, en de &lt;h1&gt; tag is een hoofding. Deze h1 mag je maar 1 keer per pagina
+            gebruiken
+            hierna gebruik je namelijk h2, h3, h4, h5, h6. De h1 is namelijk de hoofding van de pagina. De
+            &lt;class&gt;
+            tag is een element dat we later voor het stylen van de titel nodig zullen hebben. De tekst Wordle Game
+            is de
             titel en deze moet dan tussen de h1 tag staan.</p>
 
         <p>Nu gaan we verder met de code voor de tekstvakken waar we de speler letters kunnen invoeren.</p>
@@ -259,15 +274,20 @@
             Wat hier namelijk gebeurd is wederom een section met een class zoals bij de titel. Enkel
             staat er nu binnen deze section nu andere zaken. Hier staan nu divs met classes en id's in.
             Binnen deze divs staan dan weer input tags. Deze tags dienen om de tekst in te kunnen voeren en bij
-            deze game hebben we per letter een input nodig. En aangezien we 6 letters per woord hebben en 6 pogingen,
-            hebben we in totaal 36 input tags nodig. Vandaar dat we dit patroon 6 keer herhalen. Iedere div is dus een
+            deze game hebben we per letter een input nodig. En aangezien we 6 letters per woord hebben en 6
+            pogingen,
+            hebben we in totaal 36 input tags nodig. Vandaar dat we dit patroon 6 keer herhalen. Iedere div is dus
+            een
             nieuwe poging tot het raden van het woord.</p>
         <p><span class="accentText">Hoe werkt zo een input veld
                 juist?</span> Je ziet in zo een input veld verschillende waardes staan namelijk: type, inputmode,
-            maxlength en autocomplete. Deze hebben allemaal een eigen functie. Bij Type staat er nu ="text" dit betekend
-            dat dit een veld voor text is (er zijn namelijk ook nog andere types zoals "number" voor nummers, "email"
+            maxlength en autocomplete. Deze hebben allemaal een eigen functie. Bij Type staat er nu ="text" dit
+            betekend
+            dat dit een veld voor text is (er zijn namelijk ook nog andere types zoals "number" voor nummers,
+            "email"
             voor email adressen, etc). Bij inputmode staat er ="char" dit betekend dat we hier karakters willen
-            invoeren. Bij maxlength staat er ="1" dit betekend dat er maar 1 karakter in dit veld mag worden ingevoerd.
+            invoeren. Bij maxlength staat er ="1" dit betekend dat er maar 1 karakter in dit veld mag worden
+            ingevoerd.
             En bij autocomplete staat er ="off" dit betekend dat de browser geen suggesties mag geven op basis van
             eerder ingevoerde waarden in dit veld.</p>
 
@@ -301,9 +321,12 @@
         </div>
         <p>Dan klikken we op "Enter" om het bestand te maken. Eenmaal dat dit bestand gemaakt is moeten we dit nog
             linken met de onze index.html. Dit doen we in de &lt;head&gt; tag van de index.html.
-            Daar voegen we een &lt;link&gt; tag toe met de href attribute ingesteld op "style.css" en zorgen we dat het
-            pad correct ingesteld is. Omdat we hier geen complexe paden gebruiken, is het eenvoudig om het pad correct
-            in te stellen en dienen we alleen bij de href attribute style.css te zetten (maar stel we hadden meer mappen
+            Daar voegen we een &lt;link&gt; tag toe met de href attribute ingesteld op "style.css" en zorgen we dat
+            het
+            pad correct ingesteld is. Omdat we hier geen complexe paden gebruiken, is het eenvoudig om het pad
+            correct
+            in te stellen en dienen we alleen bij de href attribute style.css te zetten (maar stel we hadden meer
+            mappen
             kon dit moeilijker zijn)</p>
         <div class="copyButton">
             <button onclick="copyCode('cssLinkSnippet')">Kopieer</button>
@@ -319,10 +342,12 @@
             <img src="img/img-linked-css.png"
                 alt="afbeelding van de head tag met de link naar de CSS file in visual studio code">
         </div>
-        <p>Voordat we kunnen beginnen met het stylen van de titel moeten we eerst het lettertype inladen dit kan op 2
+        <p>Voordat we kunnen beginnen met het stylen van de titel moeten we eerst het lettertype inladen dit kan op
+            2
             manieren. Ofwel kies je om dit lettertype te downloaden en lokaal te gebruiken, ofwel kies je om het
             lettertype
-            te laden vanaf een externe bron. Wij kiezen de tweede optie. Hiervoor gebruiken we google fonts. Om het op
+            te laden vanaf een externe bron. Wij kiezen de tweede optie. Hiervoor gebruiken we google fonts. Om het
+            op
             deze manier te doen moeten we een link toevoegen aan de head tag van onze index.html.</p>
         <div class="copyButton">
             <button onclick="copyCode('googleFontsSnippet')">Kopieer</button>
@@ -333,15 +358,18 @@
         &lt;link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&amp;display=swap" rel="stylesheet"&gt;
         </code></pre>
 
-        <p> Als we dit kopieren en plakken in onze head van de index.html veranderd er visueel nog niks maar zal dit er
+        <p> Als we dit kopieren en plakken in onze head van de index.html veranderd er visueel nog niks maar zal dit
+            er
             zo uit komen te zien:</p>
         <div class="infoBlockImage">
             <img src="img/img-google-fonts.png"
                 alt="afbeelding van de head tag met de link naar google fonts in visual studio code">
         </div>
 
-        <p>Nu kunnen we beginnen met het toevoegen van de CSS styling. We gaan hier beginnen met het centreren van de
-            titel, de titel groter maken, ruimte aan de onderkant geven en het net ingelade lettertype gebruiken.</p>
+        <p>Nu kunnen we beginnen met het toevoegen van de CSS styling. We gaan hier beginnen met het centreren van
+            de
+            titel, de titel groter maken, ruimte aan de onderkant geven en het net ingelade lettertype gebruiken.
+        </p>
         <div class="copyButton">
             <button onclick="copyCode('titleSnippet')">Kopieer</button>
         </div>
@@ -354,21 +382,27 @@
         }
         </code></pre>
         <p><span class="accentText">Wat gebeurd hier nu juist?</span> met de .title kunnen we de eerder toegevoegde
-            class aanspreken. Aan deze class kunnen we dan styling geven. De font-family word gebruikt om het lettertype
-            in te stellen. Ons gekozen lettertype is "Smooch Sans" en we voegen sans-serif als fallback toe moest ons
-            lettertype niet werken. Daarna geven we met font-size toe dit zorgt voor de grote van de titel. We kiezen
-            hier voor 2.5rem dit is een andere notatie dan pixels. Dan te text-align word gebruikt om de titel in het
+            class aanspreken. Aan deze class kunnen we dan styling geven. De font-family word gebruikt om het
+            lettertype
+            in te stellen. Ons gekozen lettertype is "Smooch Sans" en we voegen sans-serif als fallback toe moest
+            ons
+            lettertype niet werken. Daarna geven we met font-size toe dit zorgt voor de grote van de titel. We
+            kiezen
+            hier voor 2.5rem dit is een andere notatie dan pixels. Dan te text-align word gebruikt om de titel in
+            het
             midden van de pagina te zetten. Die margin bottom zorgt voor ruimte aan de onderkant van de titel.</p>
         <p>Als we deze code nu kopieren en plakken in onze style.css ziet het bestand er zo uit:</p>
         <div class="infoBlockImage">
             <img src="img/img-css-title.png" alt="afbeelding van de CSS code voor de titel in visual studio code">
         </div>
-        <p>Als dit juist is en we openen de browser en herladen deze zullen we zien dat de titel nu groter, centraal en
+        <p>Als dit juist is en we openen de browser en herladen deze zullen we zien dat de titel nu groter, centraal
+            en
             met een nieuw lettertype is.</p>
         <div class="infoBlockImage">
             <img src="img/img-css-title-browser.png" alt="afbeelding van de titel met CSS styling in de browser">
         </div>
-        <p>Nu komen we aan bij de styling van de input velden. Hierbij gaan we zorgen dat het mooier rechthoekige vakjes
+        <p>Nu komen we aan bij de styling van de input velden. Hierbij gaan we zorgen dat het mooier rechthoekige
+            vakjes
             zijn waar je automatisch grote letters typt.</p>
         <div class="copyButton">
             <button onclick="copyCode('cssInputStyling')">Kopieer</button>
@@ -384,7 +418,8 @@
         }
         </code></pre>
         <p><span class="accentText">Wat gebeurd hier nu juist?</span>De width en aspect-ratio zorgen ervoor dat het
-            input veld een rechthoekig formaat heeft. Daarnaast zorg de text align center net zoals bij de titel dat de
+            input veld een rechthoekig formaat heeft. Daarnaast zorg de text align center net zoals bij de titel dat
+            de
             tekst mooi in het midden van zijn vakje staat en de font size voor de grote van de letters. De tag
             text-transform: uppercase zorgt ervoor dat de letters automatisch hoofdletters zijn. en dan color: black
             zorgt dat de letters zwarte kleur hebben.</p>
@@ -393,13 +428,15 @@
             <img src="img/img-css-input.png"
                 alt="afbeelding van de CSS code voor de input velden in visual studio code">
         </div>
-        <p>Dan openen we de browser en herladen deze zullen we zien dat de input velden nu mooi rechthoekig zijn en de
+        <p>Dan openen we de browser en herladen deze zullen we zien dat de input velden nu mooi rechthoekig zijn en
+            de
             letters die je er in typt automatisch hoofdletters zijn.</p>
         <div class="infoBlockImage">
             <img src="img/img-css-input-browser.png" alt="afbeelding van de input velden met CSS styling in de browser">
         </div>
 
-        <p>Om de input velden mooi in het midden te krijgen, zullen we volgende code toevoegen aan ons css bestand:</p>
+        <p>Om de input velden mooi in het midden te krijgen, zullen we volgende code toevoegen aan ons css bestand:
+        </p>
         <div class="copyButton">
             <button onclick="copyCode('cssBlock')">Kopieer</button>
         </div>
@@ -420,7 +457,8 @@
             }
         </code></pre>
         <p>De eerste 5 elementen in .block zullen de game in het midden van de pagina uilijnen. </p>
-        <p>de rest heeft vooral te maken met de rand van het veld, je kan hier meer over opzoeken op het internet.</p>
+        <p>de rest heeft vooral te maken met de rand van het veld, je kan hier meer over opzoeken op het internet.
+        </p>
         <div class="infoBlockImage">
             <img src="img/img-css-block.png" alt="afbeelding van de input velden met CSS styling in de browser">
         </div>
@@ -436,8 +474,13 @@
         </div>
         <p>nu gaan we de functionaliteit toevoegen met JavaScript.</p>
 
-        om te beginnen moeten we een nieuw bestand aanmaken voor onze JavaScript code. Dit doen we op dezelfde manier als bij de index.html en style.css maar nu geven we het bestand de naam <span class="accentText">"script.js"</span>.
-        <p>Eenmaal dat dit bestand gemaakt is moeten we dit nog linken met de onze index.html. Dit doen we net zoals bij de CSS maar nu voegen we een &lt;script&gt; tag toe aan het einde van de body van onze index.html.</p>
+        om te beginnen moeten we een nieuw bestand aanmaken voor onze JavaScript code. Dit doen we op dezelfde
+        manier
+        als bij de index.html en style.css maar nu geven we het bestand de naam <span
+            class="accentText">"script.js"</span>.
+        <p>Eenmaal dat dit bestand gemaakt is moeten we dit nog linken met de onze index.html. Dit doen we net zoals
+            bij
+            de CSS maar nu voegen we een &lt;script&gt; tag toe aan het einde van de body van onze index.html.</p>
         <div class="copyButton">
             <button onclick="copyCode('jsLinkSnippet')">Kopieer</button>
         </div>
@@ -448,126 +491,140 @@
             <img src="img/img-js-add-to-html.png" alt="afbeelding van de script tag in de index.html">
         </div>
         <p>we adden op het laatse alse de pagina geladen is; dus net voor de body end.</p>
-        <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we functionaliteit toevoegen gaat dit wel
+        <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we functionaliteit toevoegen gaat
+            dit
+            wel
             werken.</p>
 
         <div class="infoBlockImage">
             <img src="img\img-import-inputs.png" alt="">
         </div>
-        <p>import alls inputs van de html zodat we ze kunnen gebruiken in onze JavaScript code. (dit is de aller eerste lijn code)</p>
+        <p>import alls inputs van de html zodat we ze kunnen gebruiken in onze JavaScript code. (dit is de aller
+            eerste
+            lijn code)</p>
 
-  
 
 
 
-<div>
-<br>
-    <h3>De interactie met de velden</h3>
-    <h4>De 3 Event Listeners Uitgelegd</h4>
-    <p>
-        Denk aan event listeners als "wachters" die luisteren naar bepaalde dingen die gebeuren, en daar dan op reageren.
-    </p>
-    <br>
-    <p>
-        <h5>
-            1. keydown listener - Luistert wanneer je toetsen indrukt
-        </h5>
-        <div class="infoBlockImage">
-            <img src="img/img-event-lissener-1.png" alt="">
-        </div>
-        Wat het doet:
-        <ul>
-            <li>
-                Backspace-toets: Verwijdert de huidige letter. Als het vakje leeg is, gaat het terug naar het vorige vakje en verwijdert die letter.
-            </li>
-            <li>
-                Linker Pijl-toets: Gaat naar het vorige vakje (zoals naar achteren gaan).
-            </li>
-            <li>
-                Rechter Pijl-toets: Gaat naar het volgende vakje (zoals naar voren gaan).
-            </li>
-            
-            
-        </ul>
-        <i>
-            Real-world voorbeeld: Alsof een leraar kijkt welke toetsen je indrukt en daar op reageert.
-        </i> 
-    </p>
-    <br>
-    <p>
-        <h5>
-            2. input listener - Luistert wanneer je een letter typt
+
+        <div>
+            <br>
+            <h3>De interactie met de velden</h3>
+            <h4>De 3 Event Listeners Uitgelegd</h4>
+            <p>
+                Denk aan event listeners als "wachters" die luisteren naar bepaalde dingen die gebeuren, en daar dan
+                op
+                reageren.
+            </p>
+            <br>
+            <p>
+            <h5>
+                1. keydown listener - Luistert wanneer je toetsen indrukt
+            </h5>
+            <div class="infoBlockImage">
+                <img src="img/img-event-lissener-1.png" alt="">
+            </div>
             Wat het doet:
-              
-        </h5>
+            <ul>
+                <li>
+                    Backspace-toets: Verwijdert de huidige letter. Als het vakje leeg is, gaat het terug naar het
+                    vorige
+                    vakje en verwijdert die letter.
+                </li>
+                <li>
+                    Linker Pijl-toets: Gaat naar het vorige vakje (zoals naar achteren gaan).
+                </li>
+                <li>
+                    Rechter Pijl-toets: Gaat naar het volgende vakje (zoals naar voren gaan).
+                </li>
 
-        <ul>
-            <li>
+
+            </ul>
+            <i>
+                Real-world voorbeeld: Alsof een leraar kijkt welke toetsen je indrukt en daar op reageert.
+            </i>
+            </p>
+            <br>
+            <p>
+            <h5>
+                2. input listener - Luistert wanneer je een letter typt
+                Wat het doet:
+
+            </h5>
+
+            <ul>
+                <li>
                     Staat alleen letters toe (geen nummers of symbolen).
-            </li>
-            <li>
+                </li>
+                <li>
                     Gaat automatisch naar het volgende vakje als je een letter typt.
-            </li>
-            <li>
-                Controleert of de rij compleet is (alle 6 vakjes ingevuld).
-            </li>
-            <li>
-                Als de rij compleet is, controleert het of je gok correct is en gaat naar de volgende rij vakjes.
-            </li>
-        </ul>
-        <i>
-            Real-world voorbeeld: Alsof een helper je werk controleert zodra je elke regel afmaakt.
-        </i>
-        <br>
-        <br>
-        <p>maar voor we dit doen moeten we eerst 2 funties schrijven, dit zijn stuckjes code die we kunnen hergebruiken. (we zullen deze functies ook nog uitbrijden voor meer funtionaliteit) </p>
-        <div class="infoBlockImage">
-            <img src="img\img-event-lissener-top-2.png" alt="">
+                </li>
+                <li>
+                    Controleert of de rij compleet is (alle 6 vakjes ingevuld).
+                </li>
+                <li>
+                    Als de rij compleet is, controleert het of je gok correct is en gaat naar de volgende rij
+                    vakjes.
+                </li>
+            </ul>
+            <i>
+                Real-world voorbeeld: Alsof een helper je werk controleert zodra je elke regel afmaakt.
+            </i>
+            <br>
+            <br>
+            <p>maar voor we dit doen moeten we eerst 2 funties schrijven, dit zijn stuckjes code die we kunnen
+                hergebruiken. (we zullen deze functies ook nog uitbrijden voor meer funtionaliteit) </p>
+            <div class="infoBlockImage">
+                <img src="img\img-event-lissener-top-2.png" alt="">
+            </div>
+            <p>
+                nu we de fucties hebben kunnen we de input listener schrijven. Deze zal er als volgt uit zien (deze
+                komt
+                onder de keydown event listener binnen de input.foreach loop):
+            </p>
+            <div class="infoBlockImage">
+                <img src="img\img-event-lissener-2.png" alt="">
+            </div>
+
+            </p>
+            <br>
+            <b>Wat we nu hebben gemaakt:</b>
+            <div class="infoBlockImage">
+                <img src="img\img-event-lissener-resultaat-2.png" alt="">
+            </div>
+            <i>maar we willen natuurlijk dat we niet overal letters kunnen typen dus voegen we nog een listener
+                toe:</i>
+            <br>
+            <br>
+            <p>
+            <h5>
+                3. focus listener - Luistert wanneer je op een vakje klikt
+                Wat het doet:
+            </h5>
+            <ul>
+                <li>Voorkomt dat je op afgeronde rijen klikt (al geraden).</li>
+                <li>Houdt je gericht op de huidige rij waar je in tikt.</li>
+                <li>Als je op een oude rij klikt, brengt het je terug naar de rij waar je aan werkt.</li>
+            </ul>
+            <i>
+                Real-world voorbeeld: Zoals een portier bij een club die je alleen in de rij laat waar je hoort te
+                zijn.
+            </i>
+
+            </p>
+            <div class="infoBlockImage">
+                <img src="img\img-event-lissener-3.png" alt="">
+            </div>
+            <b>Wat we nu hebben gemaakt:</b>
+            <div class="infoBlockImage">
+                <img src="img\img-event-lissener-resultaat-3.png" alt="">
+            </div>
         </div>
-        <p>
-            nu we de fucties hebben kunnen we de input listener schrijven. Deze zal er als volgt uit zien (deze komt onder de keydown event listener binnen de input.foreach loop):
-        </p>
-        <div class="infoBlockImage">
-            <img src="img\img-event-lissener-2.png" alt="">
-        </div>
-
-    </p>
-    <br>
-    <b>Wat we nu hebben gemaakt:</b>
-    <div class="infoBlockImage">
-            <img src="img\img-event-lissener-resultaat-2.png" alt="">
-        </div>
-    <i>maar we willen natuurlijk dat we niet overal letters kunnen typen dus voegen we nog een listener toe:</i>
-    <br>
-    <br>
-    <p>
-        <h5>
-            3. focus listener - Luistert wanneer je op een vakje klikt
-            Wat het doet:
-        </h5>
-    <ul>
-        <li>Voorkomt dat je op afgeronde rijen klikt (al geraden).</li>
-        <li>Houdt je gericht op de huidige rij waar je in tikt.</li>
-        <li>Als je op een oude rij klikt, brengt het je terug naar de rij waar je aan werkt.</li>
-    </ul>
-    <i>
-        Real-world voorbeeld: Zoals een portier bij een club die je alleen in de rij laat waar je hoort te zijn.
-    </i>
-
-    </p>
-    <div class="infoBlockImage">
-        <img src="img\img-event-lissener-3.png" alt="">
-    </div>
-    <b>Wat we nu hebben gemaakt:</b>
-    <div class="infoBlockImage">
-        <img src="img\img-event-lissener-resultaat-3.png" alt="">
-    </div>
-</div>
 
 
 
 
-<script src=" js/copycode.js"></script>
+        <script src=" js/copycode.js"></script>
 </body>
 
 </html>

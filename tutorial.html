@@ -621,6 +621,93 @@
                 <img src="img\img-event-lissener-resultaat-3.png" alt="">
             </div>
         </div>
+        <div>
+            <h3>game Logica</h3>
+            <p>nu gaan we de checkrow functie uitbreiden zodat we kunnen controleren of de ingevoerde woorden correct zijn, tonen welke letter juist zijn en tonen welke letters er in zitten.</p>
+  <br>
+            <div>
+                <h4>
+                    STAP 2: Groene letters markeren 🟩
+                </h4>
+                <p>
+                    <ul>
+                        <li>Controleert elk ingevoerd letterof het exact op de juiste positie staat in het geheime woord</li>
+                        <li>
+                            Als een letter correct is, krijgt het vakje een groene kleur (door een "green" klasse toe te
+                            voegen) en wordt er een teller bijgehouden van hoeveel keer deze letter correct is geraden.
+                        </li>
+                    </ul>
+                    <div>
+                        <img src="img/img-checkrow-step-2.png" alt="">
+                    </div>
+                </p>
+            </div>
+              <br>
+            <div>
+               <h4>
+                   STAP 3: Alle letters in geheim woord tellen
+               </h4>
+               <p>
+                   <ul>
+                       <li>Maakt een inventaris van alle beschikbare letters in het geheime woord</li>
+                       <li>
+                           Bijvoorbeeld: "ADVIES" = A(1x), D(1x), V(1x), I(1x), E(1x), S(1x)
+                       </li>
+                   </ul>
+                   <div>
+                       <img src="img/img-checkrow-step-3.png" alt="">
+                   </div>
+               </p>
+           </div>
+             <br>
+            <div>
+               <h4>
+                    STAP 4: Groene letters van beschikbaarheid aftrekken
+               </h4>
+               <p>
+                   <ul>
+                       <li>Omdat groene letters al "gebruikt" zijn, halen we ze uit de beschikbare pool</li>
+                       <li>
+                           Dit voorkomt dubbel tellen (belangrijk!)
+                       </li>
+                   </ul>
+                   <div>
+                       <img src="img/img-checkrow-step-4.png" alt="">
+                   </div>
+               </p>
+           </div>
+             <br>
+            <div>
+               <h4>
+                    STAP 5: Oranje letters markeren 🟧
+               </h4>
+               <p>
+                   <ul>
+                       <li>Voor letters die NIET groen zijn: controleert of ze nog beschikbaar zijn</li>
+                        <li>Zo ja: markeert als orange (juiste letter, verkeerde plaats) en trekkt 1 van de beschikbaarheid af</li>
+                        <li>Dit zorgt dat letters maximaal zoveel keer oranje worden gemarkeerd als ze voorkomen</li>
+                   </ul>
+                   <div>
+                       <img src="img/img-checkrow-step-5.png" alt="">
+                   </div>
+               </p>
+           </div>
+           <br>
+            <div>
+               <h4>
+                    STAP 6: Win-check 🎉
+               </h4>
+               <p>
+                   <ul>
+                       <li>Als alle letters in de rij groen zijn = GEWONEN!</li>
+                        <li>Schakelt alle inputs uit en toont het win-modal</li>
+                   </ul>
+                   <div>
+                       <img src="img/img-checkrow-step-6.png" alt="">
+                   </div>
+               </p>
+           </div>
+        </div>
     </div>
     <div class="buttons">
         <a class="button" href="game.html">Ga naar het spel</a>

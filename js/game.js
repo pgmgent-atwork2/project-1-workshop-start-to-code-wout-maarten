@@ -82,16 +82,31 @@ function checkRow(startIndex) {
             input.disabled = true;
             input.style.opacity = '0.5';
         });
-        showWinModal();
+        showWinModal(true);
+    }
+    // STEP 7: Check for lose condition (all inputs filled but not all green + no more rows)
+    else if (Object.keys(greenLetters).length < word.length && endIndex === inputs.length) {
+        inputs.forEach(input => {
+            input.disabled = true;
+            input.style.opacity = '0.5';
+        });
+        showWinModal(false);
     }
 }
 
-function showWinModal() {
+function showWinModal(isWin) {
     const modal = document.getElementById('winModal');
+    const resultElement = document.getElementById('result');
     const winWordElement = document.getElementById('winWord');
     const closeButton = document.getElementById('closeModal');
     const tutorialBtn = document.getElementById('tutorialBtn');
-    
+
+    if (isWin) {
+        resultElement.textContent = '🎉 YOU WON!!! 🎉';
+    } else {
+        resultElement.textContent = 'Helaas! Probeer opnieuw.';
+    }
+
     winWordElement.textContent = word;
     modal.classList.remove('hidden');
     

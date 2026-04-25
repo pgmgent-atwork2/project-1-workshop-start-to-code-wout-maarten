@@ -372,9 +372,9 @@
             titel, de titel groter maken, ruimte aan de onderkant geven en het net ingelade lettertype gebruiken.
         </p>
         <div class="copyButton">
-            <button onclick="copyCode('titleSnippet')">Kopieer</button>
+            <button onclick="copyCode('titleCssSnippet')">Kopieer</button>
         </div>
-        <pre id="titleSnippet"><code>
+        <pre id="titleCssSnippet"><code>
         .title {
             font-family: "Smooch Sans", sans-serif;
             font-size: 2.5rem;;
@@ -473,12 +473,11 @@
         <div class="infoBlockTitle">
             <h2>Stap 6: functionaliteit: JavaScript</h2>
         </div>
-        <p>nu gaan we de functionaliteit toevoegen met JavaScript.</p>
-
-        om te beginnen moeten we een nieuw bestand aanmaken voor onze JavaScript code. Dit doen we op dezelfde
-        manier
-        als bij de index.html en style.css maar nu geven we het bestand de naam <span
-            class="accentText">"script.js"</span>.
+        <p>nu gaan we de functionaliteit toevoegen met JavaScript.
+            om te beginnen moeten we een nieuw bestand aanmaken voor onze JavaScript code. Dit doen we op dezelfde
+            manier als bij de index.html en style.css maar nu geven we het bestand de naam
+            <span class="accentText">"script.js"</span>.
+        </p>
         <p>Eenmaal dat dit bestand gemaakt is moeten we dit nog linken met de onze index.html. Dit doen we net zoals
             bij
             de CSS maar nu voegen we een &lt;script&gt; tag toe aan het einde van de body van onze index.html.</p>
@@ -486,32 +485,37 @@
             <button onclick="copyCode('jsLinkSnippet')">Kopieer</button>
         </div>
         <pre id="jsLinkSnippet"><code>
-            &lt;script src="js/script.js"&gt;&lt;/script&gt;
+            &lt;script src="script.js"&gt;&lt;/script&gt;
         </code></pre>
         <div class="infoBlockImage">
             <img src="img/img-js-add-to-html.png" alt="afbeelding van de script tag in de index.html">
         </div>
-        <p>we adden op het laatse alse de pagina geladen is; dus net voor de body end.</p>
+        <p>We voegen dit helemaal beneden aan de html toe zodat eerst de HTML kan inladen voordat de JavaScript code
+            uitgevoerd wordt.</p>
         <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we functionaliteit toevoegen gaat
             dit
             wel
             werken.</p>
+        <p>Nu gaan we eerst beginnen met het inladen van al onze eerder gemaakte input velden. Dit doen we door
+            onderstaande code toe te voegen aan ons script.js bestand:</p>
+
+        <div class="copyButton">
+            <button onclick="copyCode('jsInputsSnippet')">Kopieer</button>
+        </div>
+        <pre id="jsInputsSnippet"><code>
+            const inputs = [...document.querySelectorAll('.woord input')];
+        </code></pre>
+        <p>Als je dit dan toegevoegd hebt ziet je script.js er als volgt uit:</p>
 
         <div class="infoBlockImage">
             <img src="img\img-import-inputs.png" alt="">
         </div>
-        <p>import alls inputs van de html zodat we ze kunnen gebruiken in onze JavaScript code. (dit is de aller
-            eerste
-            lijn code)</p>
-
-
-
-
-
+        <p>Dit zal er voor zorgen dat we aan alle input velden kunnen refereren in onze JavaScript code en dus kunnen
+            controlleren of de ingevoerde letter juist is, fout is of juist is maar nog niet op de juiste plek.</p>
         <div>
             <br>
-            <h3>De interactie met de velden</h3>
-            <h4>De 3 Event Listeners Uitgelegd</h4>
+            <h3 class="accentText">De interactie met de velden</h3>
+            <h4 class="accentText">De 3 Event Listeners Uitgelegd</h4>
             <p>
                 Denk aan event listeners als "wachters" die luisteren naar bepaalde dingen die gebeuren, en daar dan
                 op
@@ -519,38 +523,46 @@
             </p>
             <br>
             <p>
-            <h5>
-                1. keydown listener - Luistert wanneer je toetsen indrukt
-            </h5>
+            <h5>1. keydown listener - Luistert wanneer je toetsen indrukt</h5>
+            <div class="copyButton">
+                <button onclick="copyCode('jsKeydownSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsKeydownSnippet"><code>
+            inputs.forEach((input, i) => {
+                input.addEventListener('keydown', e => {
+                    if (input.disabled) return;
+                    
+                    if (e.key === 'Backspace') {
+                        if (input.value) { input.value = ''; }
+                        else if (i > 0) { inputs[i - 1].focus(); inputs[i - 1].value = ''; }
+                        e.preventDefault();
+                    }
+                    if (e.key === 'ArrowLeft' && i > 0) inputs[i - 1].focus();
+                    if (e.key === 'ArrowRight' && i < inputs.length - 1) inputs[i + 1].focus();
+                    });
+                });
+                    </code></pre>
+            <p>Deze code voeg je gewoon onder de eerdere const input toe</p>
             <div class="infoBlockImage">
                 <img src="img/img-event-lissener-1.png" alt="">
             </div>
-            Wat het doet:
+            <p>Wat het doet deze code?</p>
             <ul>
                 <li>
-                    Backspace-toets: Verwijdert de huidige letter. Als het vakje leeg is, gaat het terug naar het
+                    'Backspace': Verwijdert de huidige letter. Als het vakje leeg is, gaat het terug naar het
                     vorige
                     vakje en verwijdert die letter.
                 </li>
-                <li>
-                    Linker Pijl-toets: Gaat naar het vorige vakje (zoals naar achteren gaan).
-                </li>
-                <li>
-                    Rechter Pijl-toets: Gaat naar het volgende vakje (zoals naar voren gaan).
-                </li>
-
-
+                <li>'ArrowLeft': Gaat naar het vorige vakje (zoals naar achteren gaan).</li>
+                <li>'ArrowRight': Gaat naar het volgende vakje (zoals naar voren gaan).</li>
             </ul>
-            <i>
-                Real-world voorbeeld: Alsof een leraar kijkt welke toetsen je indrukt en daar op reageert.
-            </i>
+            <p>Real-world voorbeeld: Alsof een leraar kijkt welke toetsen je indrukt en daar op reageert.</p>
             </p>
             <br>
             <p>
             <h5>
                 2. input listener - Luistert wanneer je een letter typt
                 Wat het doet:
-
             </h5>
 
             <ul>
@@ -568,25 +580,122 @@
                     vakjes.
                 </li>
             </ul>
-            <i>
-                Real-world voorbeeld: Alsof een helper je werk controleert zodra je elke regel afmaakt.
-            </i>
-            <br>
-            <br>
+            <p>Real-world voorbeeld: Alsof een helper je werk controleert zodra je elke regel afmaakt.</p>
+
             <p>maar voor we dit doen moeten we eerst 2 funties schrijven, dit zijn stuckjes code die we kunnen
                 hergebruiken. (we zullen deze functies ook nog uitbrijden voor meer funtionaliteit) </p>
+            <p>Dit stukje code plak je weer gewoon in je JavaScript-bestand onder de eerdere code:</p>
+            <div class="copyButton">
+                <button onclick="copyCode('jsRowFunctionsSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsRowFunctionsSnippet"><code>
+            const lettersPerRow = 6;
+
+            function isRowComplete(startIndex) {
+                const endIndex = startIndex + lettersPerRow;
+                const rowInputs = inputs.slice(startIndex, endIndex);
+                return rowInputs.every(input => input.value.trim() !== '');
+            }
+
+            function checkRow(startIndex) {
+                const endIndex = startIndex + lettersPerRow;
+                const rowInputs = inputs.slice(startIndex, endIndex);
+
+                // STEP 1: Disable and fade row
+                rowInputs.forEach(input => {
+                    input.disabled = true;
+                    input.style.opacity = '0.5';
+                });
+            }
+                    </code></pre>
+
             <div class="infoBlockImage">
                 <img src="img\img-event-lissener-top-2.png" alt="">
             </div>
+            <p><span class="accentText">Wat doet deze code nu?</span></p>
+            <ul>
+                <li>
+                    <span class="accentText">const lettersPerRow = 6;</span>
+                    Dit is een simpele instelling. We vertellen het spel dat elk woord in onze game precies 6 letters
+                    lang is.
+                </li>
+                <li>
+                    <span class="accentText">Functie isRowComplete (Is de rij vol?):</span>
+                    Deze functie is een controleur. Hij pakt het eerste vakje van de huidige rij, telt er 6 af, en kijkt
+                    dan of ze allemaal zijn ingevuld. Zodra er ook maar één vakje leeg is, zegt hij "Nee". Zijn
+                    ze allemaal vol? Dan geeft hij groen licht.
+                </li>
+                <li>
+                    <span class="accentText">Functie checkRow (De rij blokkeren):</span>
+                    Dit is het begin van de functie die straks gaat checken of je het woord goed hebt geraden (met de
+                    groene en oranje kleuren). In deze eerste stap doet hij nog maar één ding: het beveiligen van je
+                    gok. Hij pakt de 6 vakjes, schakelt ze uit (<code>disabled = true</code>) en maakt ze een beetje
+                    doorzichtig (<code>opacity = '0.5'</code>). Zo kan de speler zijn letters niet meer stiekem
+                    veranderen!
+                </li>
+            </ul>
             <p>
                 nu we de fucties hebben kunnen we de input listener schrijven. Deze zal er als volgt uit zien (deze
                 komt
                 onder de keydown event listener binnen de input.foreach loop):
             </p>
+            <div class="copyButton">
+                <button onclick="copyCode('jsInputListenerSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsInputListenerSnippet"><code>
+            input.addEventListener('input', e => {
+                if (input.disabled) return;
+                
+                input.value = input.value.replace(/[^a-zA-Z]/g, ''); // letters only
+                if (input.value && i < inputs.length - 1) inputs[i + 1].focus();
+                
+                // Check if current row is complete and lock it
+                const rowStartIndex = Math.floor(i / lettersPerRow) * lettersPerRow;
+                if (isRowComplete(rowStartIndex)) {
+                    checkRow(rowStartIndex);
+                    // Focus the first input of the next row
+                    const nextRowStart = rowStartIndex + lettersPerRow;
+                    if (nextRowStart < inputs.length) {
+                        inputs[nextRowStart].focus();
+                    }
+                }
+            });
+        </code></pre>
+            <p>Dus als je deze code correct is geplaats ziet de foreach er zo uit (het geslecteerde deel is de nieuwe
+                code): </p>
             <div class="infoBlockImage">
                 <img src="img\img-event-lissener-2.png" alt="">
             </div>
-
+            <p><span class="accentText">Wat doet dit nieuw stukje code nu?</span> Deze code is de motor van het spel en
+                luistert naar alles wat je typt. Het werkt in vier stappen:</p>
+            <ul>
+                <li>
+                    <span class="accentText">Alleen letters toegestaan (replace):</span>
+                    Het vreemde stukje code <code>/[^a-zA-Z]/g</code> is een zogenaamde 'RegEx' (reguliere expressie).
+                    Het is een strikte beveiliger: als een speler per ongeluk een cijfer (bijv. 8) of leesteken (bijv.
+                    @) typt, wordt dit onmiddellijk gewist en vervangen door helemaal niks (<code>''</code>). Je kunt
+                    dus uitsluitend letters typen!
+                </li>
+                <li>
+                    <span class="accentText">Automatisch doorschuiven (focus):</span>
+                    Zodra je een geldige letter hebt getypt, zorgt het script ervoor dat je niet zelf met je muis naar
+                    het volgende vakje hoeft te klikken. Met <code>inputs[i + 1].focus()</code> springt je typ-cursor
+                    automatisch naar het volgende beschikbare vakje.
+                </li>
+                <li>
+                    <span class="accentText">Controleren of je klaar bent met je gok:</span>
+                    Met een klein beetje wiskunde (<code>Math.floor</code>) berekent het script in welke van de 6 rijen
+                    je momenteel aan het typen bent. Vervolgens gebruikt hij de <code>isRowComplete</code> functie die
+                    we eerder hebben gemaakt. Heb je 6 letters getypt en is de rij vol? Dan roept hij de
+                    <code>checkRow</code> functie aan om je antwoord vast te zetten.
+                </li>
+                <li>
+                    <span class="accentText">Klaarzetten voor de volgende poging:</span>
+                    Als je gok is vastgezet, berekent het spel razendsnel waar de volgende rij begint
+                    (<code>nextRowStart</code>). Als je nog pogingen over hebt, zet hij je cursor automatisch in het
+                    eerste vakje van die nieuwe rij, zodat je in één vloeiende beweging verder kunt spelen.
+                </li>
+            </ul>
             </p>
             <br>
             <b>Wat we nu hebben gemaakt:</b>
@@ -623,97 +732,102 @@
         </div>
         <div>
             <h3>game Logica</h3>
-            <p>nu gaan we de checkrow functie uitbreiden zodat we kunnen controleren of de ingevoerde woorden correct zijn, tonen welke letter juist zijn en tonen welke letters er in zitten.</p>
-  <br>
+            <p>nu gaan we de checkrow functie uitbreiden zodat we kunnen controleren of de ingevoerde woorden
+                correct
+                zijn, tonen welke letter juist zijn en tonen welke letters er in zitten.</p>
+            <br>
             <div>
                 <h4>
                     STAP 2: Groene letters markeren 🟩
                 </h4>
                 <p>
-                    <ul>
-                        <li>Controleert elk ingevoerd letterof het exact op de juiste positie staat in het geheime woord</li>
-                        <li>
-                            Als een letter correct is, krijgt het vakje een groene kleur (door een "green" klasse toe te
-                            voegen) en wordt er een teller bijgehouden van hoeveel keer deze letter correct is geraden.
-                        </li>
-                    </ul>
-                      <br>
-                    <div>
-                        <img src="img/img-checkrow-step-2.png" alt="">
-                    </div>
+                <ul>
+                    <li>Controleert elk ingevoerd letterof het exact op de juiste positie staat in het geheime woord
+                    </li>
+                    <li>
+                        Als een letter correct is, krijgt het vakje een groene kleur (door een "green" klasse toe te
+                        voegen) en wordt er een teller bijgehouden van hoeveel keer deze letter correct is geraden.
+                    </li>
+                </ul>
+                <br>
+                <div>
+                    <img src="img/img-checkrow-step-2.png" alt="">
+                </div>
                 </p>
             </div>
-              <br>
+            <br>
             <div>
-               <h4>
-                   STAP 3: Alle letters in geheim woord tellen
-               </h4>
-               <p>
-                   <ul>
-                       <li>Maakt een inventaris van alle beschikbare letters in het geheime woord</li>
-                       <li>
-                           Bijvoorbeeld: "ADVIES" = A(1x), D(1x), V(1x), I(1x), E(1x), S(1x)
-                       </li>
-                   </ul>
-                     <br>
-                   <div>
-                       <img src="img/img-checkrow-step-3.png" alt="">
-                   </div>
-               </p>
-           </div>
-             <br>
+                <h4>
+                    STAP 3: Alle letters in geheim woord tellen
+                </h4>
+                <p>
+                <ul>
+                    <li>Maakt een inventaris van alle beschikbare letters in het geheime woord</li>
+                    <li>
+                        Bijvoorbeeld: "ADVIES" = A(1x), D(1x), V(1x), I(1x), E(1x), S(1x)
+                    </li>
+                </ul>
+                <br>
+                <div>
+                    <img src="img/img-checkrow-step-3.png" alt="">
+                </div>
+                </p>
+            </div>
+            <br>
             <div>
-               <h4>
+                <h4>
                     STAP 4: Groene letters van beschikbaarheid aftrekken
-               </h4>
-               <p>
-                   <ul>
-                       <li>Omdat groene letters al "gebruikt" zijn, halen we ze uit de beschikbare pool</li>
-                       <li>
-                           Dit voorkomt dubbel tellen (belangrijk!)
-                       </li>
-                   </ul>
-                     <br>
-                   <div>
-                       <img src="img/img-checkrow-step-4.png" alt="">
-                   </div>
-               </p>
-           </div>
-             <br>
+                </h4>
+                <p>
+                <ul>
+                    <li>Omdat groene letters al "gebruikt" zijn, halen we ze uit de beschikbare pool</li>
+                    <li>
+                        Dit voorkomt dubbel tellen (belangrijk!)
+                    </li>
+                </ul>
+                <br>
+                <div>
+                    <img src="img/img-checkrow-step-4.png" alt="">
+                </div>
+                </p>
+            </div>
+            <br>
             <div>
-               <h4>
+                <h4>
                     STAP 5: Oranje letters markeren 🟧
-               </h4>
-               <p>
-                   <ul>
-                       <li>Voor letters die NIET groen zijn: controleert of ze nog beschikbaar zijn</li>
-                        <li>Zo ja: markeert als orange (juiste letter, verkeerde plaats) en trekkt 1 van de beschikbaarheid af</li>
-                        <li>Dit zorgt dat letters maximaal zoveel keer oranje worden gemarkeerd als ze voorkomen</li>
-                   </ul>
-                     <br>
-                   <div>
-                       <img src="img/img-checkrow-step-5.png" alt="">
-                   </div>
-               </p>
-           </div>
-           <br>
+                </h4>
+                <p>
+                <ul>
+                    <li>Voor letters die NIET groen zijn: controleert of ze nog beschikbaar zijn</li>
+                    <li>Zo ja: markeert als orange (juiste letter, verkeerde plaats) en trekkt 1 van de
+                        beschikbaarheid
+                        af</li>
+                    <li>Dit zorgt dat letters maximaal zoveel keer oranje worden gemarkeerd als ze voorkomen</li>
+                </ul>
+                <br>
+                <div>
+                    <img src="img/img-checkrow-step-5.png" alt="">
+                </div>
+                </p>
+            </div>
+            <br>
             <div>
-               <h4>
+                <h4>
                     STAP 6: Win-check 🎉
-               </h4>
-               <p>
-                   <ul>
-                       <li>Als alle letters in de rij groen zijn = GEWONEN!</li>
-                        <li>Schakelt alle inputs uit en toont het win-modal</li>
-                   </ul>
-                     <br>
-                   <div>
-                       <img src="img/img-checkrow-step-6.png" alt="">
-                   </div>
-                   <h1>modal nog aanmaken en stylen maar dit is de basis logica van de win-check
-                   </h1>
-               </p>
-           </div>
+                </h4>
+                <p>
+                <ul>
+                    <li>Als alle letters in de rij groen zijn = GEWONEN!</li>
+                    <li>Schakelt alle inputs uit en toont het win-modal</li>
+                </ul>
+                <br>
+                <div>
+                    <img src="img/img-checkrow-step-6.png" alt="">
+                </div>
+                <h1>modal nog aanmaken en stylen maar dit is de basis logica van de win-check
+                </h1>
+                </p>
+            </div>
         </div>
     </div>
     <div class="buttons">

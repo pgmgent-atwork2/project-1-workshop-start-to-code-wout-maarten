@@ -720,11 +720,61 @@
                 Real-world voorbeeld: Zoals een portier bij een club die je alleen in de rij laat waar je hoort te
                 zijn.
             </i>
-
             </p>
+            <div class="copyButton">
+                <button onclick="copyCode('jsFocusListenerSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsFocusListenerSnippet"><code>
+            input.addEventListener('focus', () => {
+                // Check which row this input is in
+                const currentRowStart = Math.floor(i / lettersPerRow) * lettersPerRow;
+                
+                // Find the first non-disabled row
+                let firstEnabledRowStart = 0;
+                for (let row = 0; row < inputs.length; row += lettersPerRow) {
+                    if (!inputs[row].disabled) {
+                        firstEnabledRowStart = row;
+                        break;
+                    }
+                }
+                
+                // If this input is in the first enabled row, allow focus and select
+                if (currentRowStart === firstEnabledRowStart) {
+                    input.select();
+                } else {
+                    // Otherwise, focus the first input of the first enabled row
+                    inputs[firstEnabledRowStart].focus();
+                }
+            });
+                </code></pre>
+            <p>Deze code plak je onder de code van de vorige stap (het geselecteerde gedeelte is de nieuwe code).</p>
             <div class="infoBlockImage">
                 <img src="img\img-event-lissener-3.png" alt="">
             </div>
+            <p><span class="accentText">Wat doet dit nieuw stukje code nu?</span> Herinner je je het voorbeeld van de
+                portier nog? Dit is de exacte code die ervoor zorgt dat spelers niet vals kunnen spelen door zomaar
+                ergens op het bord te klikken. Het werkt in drie slimme stappen:</p>
+            <ul>
+                <li>
+                    <span class="accentText">1. Waar heb je geklikt? (currentRowStart):</span>
+                    Zodra je op een vakje klikt (het vakje krijgt 'focus'), berekent het script door middel van wat
+                    wiskunde in welke van de rijen dit specifieke vakje zich bevindt.
+                </li>
+                <li>
+                    <span class="accentText">2. Waar hoor je te zijn? (firstEnabledRowStart):</span>
+                    Vervolgens scant de code met een zogenaamde for-loop het hele speelveld van boven naar
+                    beneden. Hij zoekt en stopt (<code>break</code>) bij de allereerste rij die nog niet is
+                    uitgeschakeld (<code>disabled</code>). Dit is de huidige, actieve beurt van de speler.
+                </li>
+                <li>
+                    <span class="accentText">3. De portier grijpt in (If / Else):</span>
+                    Nu vergelijkt de code deze twee locaties met elkaar. Klikte je inderdaad in de actieve rij? Dan is
+                    alles goed (de <code>if</code>) en wordt je letter netjes geselecteerd (<code>input.select()</code>)
+                    zodat je die makkelijk kunt aanpassen. Maar klikte je stiekem op een oude, al geraden rij, of juist
+                    een rij in de toekomst? Dan grijpt de <code>else</code> in en wordt je cursor genadeloos
+                    teruggestuurd naar het eerste vakje van de juiste rij!
+                </li>
+            </ul>
             <b>Wat we nu hebben gemaakt:</b>
             <div class="infoBlockImage">
                 <img src="img\img-event-lissener-resultaat-3.png" alt="">
@@ -735,7 +785,6 @@
             <p>nu gaan we de checkrow functie uitbreiden zodat we kunnen controleren of de ingevoerde woorden
                 correct
                 zijn, tonen welke letter juist zijn en tonen welke letters er in zitten.</p>
-            <br>
             <div>
                 <h4>
                     STAP 2: Groene letters markeren 🟩
@@ -749,7 +798,22 @@
                         voegen) en wordt er een teller bijgehouden van hoeveel keer deze letter correct is geraden.
                     </li>
                 </ul>
-                <br>
+                <div class="copyButton">
+                    <button onclick="copyCode('jsGreenLettersSnippet')">Kopieer</button>
+                </div>
+                <pre id="jsGreenLettersSnippet"><code>
+                // STEP 2: Mark GREEN letters (correct position)
+                const greenLetters = {};
+                rowInputs.forEach((input, index) => {
+                    const letter = input.value.toUpperCase();
+                    if (letter === word[index]) {
+                        input.classList.add('green');
+                        greenLetters[letter] = (greenLetters[letter] || 0) + 1;
+                        console.log(greenLetters);
+                    }
+                });
+                    </code></pre>
+                <p>Deze code kan je netjes onder stap 1 plaatsen en dan komt je script.js er zo uit te zien:</p>
                 <div>
                     <img src="img/img-checkrow-step-2.png" alt="">
                 </div>
@@ -767,7 +831,18 @@
                         Bijvoorbeeld: "ADVIES" = A(1x), D(1x), V(1x), I(1x), E(1x), S(1x)
                     </li>
                 </ul>
-                <br>
+                <div class="copyButton">
+                    <button onclick="copyCode('jsCountLettersSnippet')">Kopieer</button>
+                </div>
+                <pre id="jsCountLettersSnippet"><code>
+                // STEP 3: Count all letters in secret word
+                const availableLetters = {};
+                for (let i = 0; i < word.length; i++) {
+                    const letter = word[i];
+                    availableLetters[letter] = (availableLetters[letter] || 0) + 1;
+                }
+                    </code></pre>
+                <p>Deze plaats je dan netjes onder stap 2.</p>
                 <div>
                     <img src="img/img-checkrow-step-3.png" alt="">
                 </div>
@@ -785,7 +860,16 @@
                         Dit voorkomt dubbel tellen (belangrijk!)
                     </li>
                 </ul>
-                <br>
+                <div class="copyButton">
+                    <button onclick="copyCode('jsRemoveGreensSnippet')">Kopieer</button>
+                </div>
+                <pre id="jsRemoveGreensSnippet"><code>
+                // STEP 4: Remove greens from available pool (avoid double-counting)
+                for (let letter in greenLetters) {
+                    availableLetters[letter] -= greenLetters[letter];
+                }
+                    </code></pre>
+                <p>Deze plaats je dan netjes onder stap 3.</p>
                 <div>
                     <img src="img/img-checkrow-step-4.png" alt="">
                 </div>
@@ -804,7 +888,24 @@
                         af</li>
                     <li>Dit zorgt dat letters maximaal zoveel keer oranje worden gemarkeerd als ze voorkomen</li>
                 </ul>
-                <br>
+                <div class="copyButton">
+                    <button onclick="copyCode('jsOrangeLettersSnippet')">Kopieer</button>
+                </div>
+                <pre id="jsOrangeLettersSnippet"><code>
+                // STEP 5: Mark ORANGE letters (wrong position, but in word)
+                rowInputs.forEach((input, index) => {
+                    const letter = input.value.toUpperCase();
+                    
+                    if (input.classList.contains('green')) return; // Skip greens
+                    
+                    // If letter still available, mark orange and use one instance
+                    if (availableLetters[letter] && availableLetters[letter] > 0) {
+                        input.classList.add('orange');
+                        availableLetters[letter]--;
+                    }
+                });
+                    </code></pre>
+                <p>Deze plaats je dan netjes onder stap 4.</p>
                 <div>
                     <img src="img/img-checkrow-step-5.png" alt="">
                 </div>
@@ -820,13 +921,52 @@
                     <li>Als alle letters in de rij groen zijn = GEWONEN!</li>
                     <li>Schakelt alle inputs uit en toont het win-modal</li>
                 </ul>
-                <br>
+                <div class="copyButton">
+                    <button onclick="copyCode('jsWinConditionSnippet')">Kopieer</button>
+                </div>
+                <pre id="jsWinConditionSnippet"><code>
+                //Step 6: Check for win condition
+                if (Object.keys(greenLetters).length === word.length) {
+                        inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.opacity = '0.5';
+                    });
+                    showWinModal(true);
+                }
+                    </code></pre>
                 <div>
                     <img src="img/img-checkrow-step-6.png" alt="">
                 </div>
-                <h1>modal nog aanmaken en stylen maar dit is de basis logica van de win-check
-                </h1>
                 </p>
+            </div>
+            <div>
+                <h4>
+                    STAP 7: Verlies-check 😢
+                </h4>
+                <ul>
+                    <li>Als niet alle letters groen zijn én we bij het allerlaatste vakje van het bord zijn = VERLOREN!
+                    </li>
+                    <li>Schakelt (net als bij winst) alle inputs uit en opent de modal, maar geeft nu 'false' mee zodat
+                        het spel weet dat je niet gewonnen hebt.</li>
+                </ul>
+
+                <div class="copyButton">
+                    <button onclick="copyCode('jsLoseConditionSnippet')">Kopieer</button>
+                </div>
+                <pre id="jsLoseConditionSnippet"><code>
+                // STEP 7: Check for lose condition (all inputs filled but not all green + no more rows)
+                else if (Object.keys(greenLetters).length < word.length && endIndex === inputs.length) {
+                    inputs.forEach(input => {
+                        input.disabled = true;
+                        input.style.opacity = '0.5';
+                    });
+                    showWinModal(false);
+                }
+                            </code></pre>
+
+                <div>
+                    <img src="img/img-checkrow-step-7.png" alt="Code voorbeeld van de verlies-check">
+                </div>
             </div>
         </div>
     </div>

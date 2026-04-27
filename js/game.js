@@ -3,20 +3,18 @@ const lettersPerRow = 6;
 let word = ''; // This will be replaced by a random word in a real game
 
 
-// let word = '';
-
 // Load and get random word from words.json
 async function loadRandomWord() {
-    // try {
-    //     const response = await fetch('./words.json');
-    //     const data = await response.json();
-    //     const wordList = data.words;
-    //     word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
-    //     console.log('Secret word loaded:', word);
-    // } catch (error) {
-    //     console.error('Error loading words:', error);
-    // }
-    word = 'ADVIES';
+    try {
+        const response = await fetch('./words.json');
+        const data = await response.json();
+        const wordList = data.words;
+        word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+        console.log('Secret word loaded:', word);
+    } catch (error) {
+        console.error('Error loading words:', error);
+    }
+    // word = 'ADVIES';
 }
 
 // Load the word when page loads

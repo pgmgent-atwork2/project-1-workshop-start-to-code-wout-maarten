@@ -37,19 +37,6 @@ input {
   margin-bottom: var(--medium-spacing);
 }
 
-  /* & .infoBlockTitle {
-    font-size: var(--medium-spacing);
-    border-bottom: 2px solid var(--primary-accent-color);
-    margin-bottom: var(--small-spacing);
-    font-family: "Smooch Sans", sans-serif;
-    color: var(--primary-accent-color);
-  }
-
-  & .accentText {
-    color: var(--primary-accent-color);
-    font-weight: var(--medium-font-weight);
-  } */
-
 /* Modal Styling */
 .modal {
   position: fixed;

@@ -36,21 +36,10 @@
             <li>Hoe style je een website met CSS?</li>
             <li>Hoe maak je een interactieve website met JavaScript?</li>
         </ol>
-        <p><span class="accentText">Wat is HTML?</span> HTML staat voor HyperText Markup Language. Dit word gebruikt om
-            de structuur en inhoud van een
-            webpagina te definiëren. Dit geeft alles aan via tags. Deze tags hebben allemaal een eigen functie. Zoals de
-            tag &lt;h1&gt; voor de hoofdtitel. Zo een tag open en sluit je altijd door &lt;h1&gt; en &lt;/h1&gt; te
-            gebruiken. Tussen deze tags zet je dan de tekst die je wilt weergeven. Zoals in dit geval "Game Tutorial".
-            Er zijn veel verschillende tags die je kunt gebruiken, zoals &lt;div&gt; voor het maken van een container,
-            &lt;p&gt; voor het maken van een paragraaf, &lt;a&gt; voor het maken van een link, en nog veel meer. HTML is
-            de basis van elke website en is essentieel om te leren als je een webontwikkelaar wilt worden.
+        <p><span class="accentText">Wat is HTML?</span> HTML staat voor HyperText Markup Language. Dit wordt gebruikt om de structuur en inhoud van een webpagina te definiëren. HTML werkt met tags: speciale labels die aan de browser vertellen hoe de inhoud eruit moet zien. Elke tag heeft een eigen functie. De tag &lt;h1&gt; creëert bijvoorbeeld een grote titel. Je opent een tag met &lt;h1&gt; en sluit deze af met &lt;/h1&gt;. De inhoud die je wilt weergeven plaats je ertussenin (bijv. "Game Tutorial"). Er zijn veel verschillende tags: &lt;div&gt; voor containers, &lt;p&gt; voor alinea's, &lt;a&gt; voor links, en nog veel meer. HTML is de basis van elke website.
         </p>
-        <p><span class="accentText">Wat is CSS?</span> CSS staat voor Cascading Style Sheets. Dit word gebruikt om de
-            stijl en lay-out van een
-            webpagina te definiëren. Met CSS kun je de kleuren, lettertypen, marges, en nog veel meer van een
-            webpagina aanpassen. CSS werkt door middel van selectors, waarmee je specifieke HTML-elementen kunt
-            selecteren en stylen. Je kunt CSS in een apart bestand plaatsen of direct in de HTML-code schrijven. CSS is
-            essentieel om een aantrekkelijke en gebruiksvriendelijke website te maken.</p>
+        <p><span class="accentText">Wat is CSS?</span> CSS staat voor Cascading Style Sheets. Dit wordt gebruikt om de stijl en lay-out van een webpagina te bepalen. Met CSS pas je kleuren, lettertypen, afstanden en nog veel meer aan. CSS werkt met selectors: je kiest welke HTML-elementen je wilt stylen, en voegt vervolgens stijlregels toe. Je kunt CSS in een apart bestand plaatsen of direct in de HTML-code schrijven. CSS is essentieel voor een aantrekkelijke en gebruiksvriendelijke website.
+        </p>
         <p><span class="accentText">Wat is JavaScript?</span> JavaScript is een programmeertaal die wordt gebruikt om
             interactieve elementen aan een
             webpagina toe te voegen. Met JavaScript kun je dingen doen zoals het reageren op gebruikersinvoer, het
@@ -74,7 +63,7 @@
             </ul>
         </div>
         <div class="infoBlockDisclaimer">
-            <p>je hoeft geen voorkennis te hebben om deze tutorial te kunnen voltooien.</p>
+            <p>Je hoeft geen voorkennis te hebben om deze tutorial te kunnen voltooien.</p>
         </div>
     </div>
     <div class="infoBlock">
@@ -87,13 +76,8 @@
         <div class="infoBlockImage">
             <img src="img/img-create-map.png" alt="afbeelding van het aanmaken van een map">
         </div>
-        <p>Hierna gaan we dit project open in onze code editor bv <a class="infoBlockLink"
-                href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>.
-            Dit doe je door visual studio code te openen en en te klikken op <span class="accentText">Open
-                Folder</span>.</p>
-        <p>Eenmaal daarop geklikt ga je naar de locatie waar je de map van het project hebt aangemaakt en klik je hierop
-            en dan rechtsonder op open
-        </p>
+        <p>Hierna open je dit project in een code editor zoals <a class="infoBlockLink" href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a>. Dit doe je door Visual Studio Code te openen en te klikken op <span class="accentText">Open Folder</span>.</p>
+        <p>Navigeer naar de locatie waar je je projectmap hebt aangemaakt, selecteer deze en klik rechtonder op <span class="accentText">Open</span>.</p>
         <div class="infoBlockImage">
             <img src="img/img-opening-project.png" alt="afbeelding van het openen van een map in visual studio code">
         </div>
@@ -112,10 +96,7 @@
         <div class="infoBlockImage">
             <img src="img/img-finish-projectsetup.png" alt="afbeelding van de project structuur in visual studio code">
         </div>
-        <p>Maar voordat we kunnen beginnen moeten we nog een extensie installeren. Deze zal er voor zorgen dat alles
-            netjes inlaadt in de browser. Dit kan je doen door links in visual studio code te klikken op het icon van
-            extensions (lijkt op 4 vierkanten). Eenmaal daarop klikt can je bovenaan in de zoekbalk <span
-                class="accentText">"Live Server"</span> typen en deze installeren.</p>
+        <p>Voordat we beginnen moeten we nog een extensie installeren. Deze zorgt ervoor dat de pagina live ververst in je browser. Dit doe je door links in Visual Studio Code op het extensie-icoon te klikken (vier vierkantjes). Zoek vervolgens naar <span class="accentText">"Live Server"</span> en installeer deze.</p>
         <div class="infoBlockImage">
             <img src="img/img-install-liveserver.png"
                 alt="afbeelding van het installeren van de live server extensie in visual studio code">
@@ -146,13 +127,7 @@
     &lt;/body&gt;
     &lt;/html&gt;</code></pre>
 
-        <p><span class="accentText">Wat doet dit nu allemaal?</span> De &lt;html&gt; tag is de basis van je pagina.
-            In
-            de &lt;head&gt;
-            staan onzichtbare instellingen zoals de &lt;meta&gt; charset voor speciale tekens en de
-            &lt;title&gt; voor je browsertab (de naam dat bovenaan bij een website staat). Alles wat je uiteindelijk
-            écht op het scherm wilt zien, plaats je
-            tussen de &lt;body&gt; tags.
+        <p><span class="accentText">Wat betekent dit?</span> De &lt;html&gt; tag is het startpunt van je pagina. In de &lt;head&gt; plaats je onzichtbare instellingen, zoals de &lt;meta&gt; charset (voor speciale tekens) en &lt;title&gt; (de naam die in de browser-tab staat). Alles wat je op het scherm wilt zien plaats je tussen de &lt;body&gt; tags.
         </p>
         <p>Als alles goed is gegaan ziet je visual studio code er als volgt uit:</p>
         <div class="infoBlockImage">
@@ -204,18 +179,10 @@
         <div class="infoBlockImage">
             <img src="img/img-title-browser.png" alt="afbeelding van de titel in de browser">
         </div>
-        <p><span class="accentText">Wat staat hier nu?</span> De &lt;section&gt; tag is een container voor een
-            specifiek
-            deel van de pagina, en de &lt;h1&gt; tag is een hoofding. Deze h1 mag je maar 1 keer per pagina
-            gebruiken
-            hierna gebruik je namelijk h2, h3, h4, h5, h6. De h1 is namelijk de hoofding van de pagina. De
-            &lt;class&gt;
-            tag is een element dat we later voor het stylen van de titel nodig zullen hebben. De tekst Wordle Game
-            is de
-            titel en deze moet dan tussen de h1 tag staan.</p>
+        <p><span class="accentText">Wat betekent dit?</span> De &lt;section&gt; tag is een container voor een bepaald deel van je pagina. De &lt;h1&gt; tag creëert de hoofdtitel. Let op: &lt;h1&gt; mag slechts één keer per pagina voorkomen. Daarna gebruik je &lt;h2&gt;, &lt;h3&gt;, enzovoort. Het attribuut <span class="accentText">class="title"</span> is een label dat we later gebruiken voor styling. De tekst "WORDLE GAME" plaatsen we tussen de &lt;h1&gt; tags.
+        </p>
 
-        <p>Nu gaan we verder met de code voor de tekstvakken waar we de speler letters kunnen invoeren.</p>
-        <p>Dit gaan we doen via de &lt;input&gt; tag. Daarin kan je text invoeren.</p>
+        <p>Nu voegen we tekstvakken toe waar spelers letters kunnen invoeren. Dit doen we met de &lt;input&gt; tag.</p>
         <div class="copyButton">
             <button onclick="copyCode('inputSnippet')">Kopieer</button>
         </div>
@@ -271,29 +238,18 @@
             &lt;/div&gt;
         &lt;/section&gt;
         </code></pre>
-        <p>Dit lijkt misschien ingewikkeld en veel code maar eigenlijk is dit altijd hetzelfde patroon.
-            Wat hier namelijk gebeurd is wederom een section met een class zoals bij de titel. Enkel
-            staat er nu binnen deze section nu andere zaken. Hier staan nu divs met classes en id's in.
-            Binnen deze divs staan dan weer input tags. Deze tags dienen om de tekst in te kunnen voeren en bij
-            deze game hebben we per letter een input nodig. En aangezien we 6 letters per woord hebben en 6
-            pogingen,
-            hebben we in totaal 36 input tags nodig. Vandaar dat we dit patroon 6 keer herhalen. Iedere div is dus
-            een
-            nieuwe poging tot het raden van het woord.</p>
-        <p><span class="accentText">Hoe werkt zo een input veld
-                juist?</span> Je ziet in zo een input veld verschillende waardes staan namelijk: type, inputmode,
-            maxlength en autocomplete. Deze hebben allemaal een eigen functie. Bij Type staat er nu ="text" dit
-            betekend
-            dat dit een veld voor text is (er zijn namelijk ook nog andere types zoals "number" voor nummers,
-            "email"
-            voor email adressen, etc). Bij inputmode staat er ="char" dit betekend dat we hier karakters willen
-            invoeren. Bij maxlength staat er ="1" dit betekend dat er maar 1 karakter in dit veld mag worden
-            ingevoerd.
-            En bij autocomplete staat er ="off" dit betekend dat de browser geen suggesties mag geven op basis van
-            eerder ingevoerde waarden in dit veld.</p>
+        <p>Dit ziet er ingewikkeld uit, maar het is eigenlijk steeds hetzelfde patroon. We hebben een &lt;section&gt; met daarin 6 &lt;div&gt; elementen (voor 6 pogingen). Elk &lt;div&gt; bevat 6 &lt;input&gt; velden (voor 6 letters per woord). In totaal hebben we dus 36 input velden. Het belangrijkste is dat je het patroon begrijpt: elke poging is één rij met zes velden.
+        </p>
+        <p><span class="accentText">Hoe werken deze input velden?</span> Elk input veld heeft verschillende instellingen:
+        <ul>
+        <li><span class="accentText">type="text"</span> — Dit zorgt ervoor dat je tekst kunt typen (niet nummers of iets anders).</li>
+        <li><span class="accentText">inputmode="char"</span> — Dit vertelt mobiele apparaten dat je individuele karakters invoert.</li>
+        <li><span class="accentText">maxlength="1"</span> — Dit zorgt dat slechts 1 karakter in elk veld past.</li>
+        <li><span class="accentText">autocomplete="off"</span> — Dit voorkomt dat je browser eerdere invoer voorstelft.</li>
+        </ul>
+        </p>
 
-        <p>Als we deze code nu kopieren en in visual studio code plakken onder de &lt;/section&gt; tag dan hoort je
-            index.html nu er zo uit te zien:
+        <p>Plak deze code in je index.html onder de eerder gemaakte &lt;section&gt;. Je index.html zou er nu zo uit moeten zien:
         </p>
         <div class="infoBlockImage">
             <img src="img/img-input-vsc.png"
@@ -359,17 +315,13 @@
         &lt;link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&amp;display=swap" rel="stylesheet"&gt;
         </code></pre>
 
-        <p> Als we dit kopieren en plakken in onze head van de index.html veranderd er visueel nog niks maar zal dit
-            er
-            zo uit komen te zien:</p>
+        <p>Plak deze links in de &lt;head&gt; van je index.html. Visueel verandert er nog niets, maar het lettertype is nu beschikbaar:</p>
         <div class="infoBlockImage">
             <img src="img/img-google-fonts.png"
                 alt="afbeelding van de head tag met de link naar google fonts in visual studio code">
         </div>
 
-        <p>Nu kunnen we beginnen met het toevoegen van de CSS styling. We gaan hier beginnen met het centreren van
-            de
-            titel, de titel groter maken, ruimte aan de onderkant geven en het net ingelade lettertype gebruiken.
+        <p>Nu voegen we CSS styling toe. We beginnen met het centreren van de titel, deze groter maken, ruimte aan de onderkant toevoegen en het lettertype gebruiken dat we net hebben ingeladen.
         </p>
         <div class="copyButton">
             <button onclick="copyCode('titleCssSnippet')">Kopieer</button>
@@ -382,16 +334,14 @@
             margin-bottom: 2rem;
         }
         </code></pre>
-        <p><span class="accentText">Wat gebeurd hier nu juist?</span> met de .title kunnen we de eerder toegevoegde
-            class aanspreken. Aan deze class kunnen we dan styling geven. De font-family word gebruikt om het
-            lettertype
-            in te stellen. Ons gekozen lettertype is "Smooch Sans" en we voegen sans-serif als fallback toe moest
-            ons
-            lettertype niet werken. Daarna geven we met font-size toe dit zorgt voor de grote van de titel. We
-            kiezen
-            hier voor 2.5rem dit is een andere notatie dan pixels. Dan te text-align word gebruikt om de titel in
-            het
-            midden van de pagina te zetten. Die margin bottom zorgt voor ruimte aan de onderkant van de titel.</p>
+        <p><span class="accentText">Wat doen deze regels?</span>
+        <ul>
+        <li><span class="accentText">font-family</span> — Stelt het lettertype in. We gebruiken "Smooch Sans" met "sans-serif" als terugval.</li>
+        <li><span class="accentText">font-size</span> — Bepaalt de grootte (2.5rem is een proportionele eenheid).</li>
+        <li><span class="accentText">text-align: center</span> — Centreert de titel horizontaal.</li>
+        <li><span class="accentText">margin-bottom</span> — Voegt ruimte toe onder de titel.</li>
+        </ul>
+        </p>
         <p>Als we deze code nu kopieren en plakken in onze style.css ziet het bestand er zo uit:</p>
         <div class="infoBlockImage">
             <img src="img/img-css-title.png" alt="afbeelding van de CSS code voor de titel in visual studio code">
@@ -418,20 +368,21 @@
             color: black;
         }
         </code></pre>
-        <p><span class="accentText">Wat gebeurd hier nu juist?</span>De width en aspect-ratio zorgen ervoor dat het
-            input veld een rechthoekig formaat heeft. Daarnaast zorg de text align center net zoals bij de titel dat
-            de
-            tekst mooi in het midden van zijn vakje staat en de font size voor de grote van de letters. De tag
-            text-transform: uppercase zorgt ervoor dat de letters automatisch hoofdletters zijn. en dan color: black
-            zorgt dat de letters zwarte kleur hebben.</p>
+        <p><span class="accentText">Wat doen deze regels?</span>
+        <ul>
+        <li><span class="accentText">width & aspect-ratio</span> — Maken elk veld vierkant.</li>
+        <li><span class="accentText">text-align: center</span> — Centreert de letter in het vak.</li>
+        <li><span class="accentText">font-size</span> — Bepaalt lettergrootte.</li>
+        <li><span class="accentText">text-transform: uppercase</span> — Zet alle invoer automatisch in HOOFDLETTERS.</li>
+        <li><span class="accentText">color: black</span> — Maakt de tekst zwart.</li>
+        </ul>
+        </p>
         <p>Als je deze code nu in je style.css plaatst, ziet het bestand er zo uit:</p>
         <div class="infoBlockImage">
             <img src="img/img-css-input.png"
                 alt="afbeelding van de CSS code voor de input velden in visual studio code">
         </div>
-        <p>Dan openen we de browser en herladen deze zullen we zien dat de input velden nu mooi rechthoekig zijn en
-            de
-            letters die je er in typt automatisch hoofdletters zijn.</p>
+        <p>Open nu de browser en ververs de pagina. Je zult zien dat de input velden nu vierkant zijn en letters automatisch in HOOFDLETTERS verschijnen.</p>
         <div class="infoBlockImage">
             <img src="img/img-css-input-browser.png" alt="afbeelding van de input velden met CSS styling in de browser">
         </div>
@@ -457,9 +408,7 @@
                 margin-bottom: 2rem;
             }
         </code></pre>
-        <p>De eerste 5 elementen in .block zullen de game in het midden van de pagina uilijnen. </p>
-        <p>de rest heeft vooral te maken met de rand van het veld, je kan hier meer over opzoeken op het internet.
-        </p>
+        <p>De eerste 5 eigenschappen centreren de game op de pagina. De overige eigenschappen bepalen de stijl: rand, achtergrondkleur, hoeken en schaduw.</p>
         <div class="infoBlockImage">
             <img src="img/img-css-block.png" alt="afbeelding van de input velden met CSS styling in de browser">
         </div>
@@ -467,6 +416,7 @@
         <div class="infoBlockImage">
             <img src="img/img-wordel-view-leeg.png" alt="afbeelding van de input velden met CSS styling in de browser">
         </div>
+
 
     </div>
     <div class="infoBlock">
@@ -478,26 +428,20 @@
             manier als bij de index.html en style.css maar nu geven we het bestand de naam
             <span class="accentText">"script.js"</span>.
         </p>
-        <p>Eenmaal dat dit bestand gemaakt is moeten we dit nog linken met de onze index.html. Dit doen we net zoals
-            bij
-            de CSS maar nu voegen we een &lt;script&gt; tag toe aan het einde van de body van onze index.html.</p>
+        <p>Als dit bestand is aangemaakt moet je het linken in je index.html. Voeg deze &lt;script&gt; tag toe helemaal onderin je &lt;body&gt;:
+        </p>
         <div class="copyButton">
             <button onclick="copyCode('jsLinkSnippet')">Kopieer</button>
         </div>
         <pre id="jsLinkSnippet"><code>
-            &lt;script src="script.js"&gt;&lt;/script&gt;
+            &lt;script src="js/game.js"&gt;&lt;/script&gt;
         </code></pre>
         <div class="infoBlockImage">
             <img src="img/img-js-add-to-html.png" alt="afbeelding van de script tag in de index.html">
         </div>
-        <p>We voegen dit helemaal beneden aan de html toe zodat eerst de HTML kan inladen voordat de JavaScript code
-            uitgevoerd wordt.</p>
-        <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we functionaliteit toevoegen gaat
-            dit
-            wel
-            werken.</p>
-        <p>Nu gaan we eerst beginnen met het inladen van al onze eerder gemaakte input velden. Dit doen we door
-            onderstaande code toe te voegen aan ons script.js bestand:</p>
+        <p>We plaatsen deze &lt;script&gt; helemaal onderaan zodat eerst de HTML laadt voordat JavaScript wordt uitgevoerd.</p>
+        <p>We beginnen door al onze eerder gemaakte input velden in te laden. Voeg deze code toe aan je game.js:
+        </p>
 
         <div class="copyButton">
             <button onclick="copyCode('jsInputsSnippet')">Kopieer</button>
@@ -510,17 +454,13 @@
         <div class="infoBlockImage">
             <img src="img\img-import-inputs.png" alt="">
         </div>
-        <p>Dit zal er voor zorgen dat we aan alle input velden kunnen refereren in onze JavaScript code en dus kunnen
-            controlleren of de ingevoerde letter juist is, fout is of juist is maar nog niet op de juiste plek.</p>
+        <p>Zo kunnen we in JavaScript naar alle input velden verwijzen en controleren welke letters juist zijn.
+        </p>
         <div>
             <br>
             <h3 class="accentText">De interactie met de velden</h3>
             <h4 class="accentText">De 3 Event Listeners Uitgelegd</h4>
-            <p>
-                Denk aan event listeners als "wachters" die luisteren naar bepaalde dingen die gebeuren, en daar dan
-                op
-                reageren.
-            </p>
+            <p>Event listeners zijn "wachters" die op bepaalde acties wachten (zoals klikken of typen) en daar dan op reageren.</p>
             <br>
             <p>
             <h5>1. keydown listener - Luistert wanneer je toetsen indrukt</h5>
@@ -542,7 +482,7 @@
                     });
                 });
                     </code></pre>
-            <p>Deze code voeg je gewoon onder de eerdere const input toe</p>
+            <p>Voeg deze code toe onder je eerdere `const inputs` regel.</p>
             <div class="infoBlockImage">
                 <img src="img/img-event-lissener-1.png" alt="">
             </div>
@@ -661,39 +601,27 @@
                 }
             });
         </code></pre>
-            <p>Dus als je deze code correct is geplaats ziet de foreach er zo uit (het geslecteerde deel is de nieuwe
-                code): </p>
+            <p>Voeg deze code toe onder je keydown event listener. Het geselecteerde deel is de nieuwe code:</p>
             <div class="infoBlockImage">
                 <img src="img\img-event-lissener-2.png" alt="">
             </div>
-            <p><span class="accentText">Wat doet dit nieuw stukje code nu?</span> Deze code is de motor van het spel en
-                luistert naar alles wat je typt. Het werkt in vier stappen:</p>
+            <p><span class="accentText">Wat doet deze code?</span> Dit is het hart van het spel. Het luistert naar je invoer en werkt in vier stappen:</p>
             <ul>
                 <li>
-                    <span class="accentText">Alleen letters toegestaan (replace):</span>
-                    Het vreemde stukje code <code>/[^a-zA-Z]/g</code> is een zogenaamde 'RegEx' (reguliere expressie).
-                    Het is een strikte beveiliger: als een speler per ongeluk een cijfer (bijv. 8) of leesteken (bijv.
-                    @) typt, wordt dit onmiddellijk gewist en vervangen door helemaal niks (<code>''</code>). Je kunt
-                    dus uitsluitend letters typen!
+                    <span class="accentText">Alleen letters toegestaan:</span>
+                    De code <code>/[^a-zA-Z]/g</code> is een "regex" (reguliere expressie). Dit is een beveiliger: als je een cijfer (8) of leesteken (@) typt, wordt dit onmiddellijk verwijderd. Alleen letters worden toegelaten.
                 </li>
                 <li>
-                    <span class="accentText">Automatisch doorschuiven (focus):</span>
-                    Zodra je een geldige letter hebt getypt, zorgt het script ervoor dat je niet zelf met je muis naar
-                    het volgende vakje hoeft te klikken. Met <code>inputs[i + 1].focus()</code> springt je typ-cursor
-                    automatisch naar het volgende beschikbare vakje.
+                    <span class="accentText">Automatisch doorschuiven:</span>
+                    Zodra je een letter typt springt de cursor automatisch naar het volgende vak. Je hoeft dus niet zelf te klikken.
                 </li>
                 <li>
-                    <span class="accentText">Controleren of je klaar bent met je gok:</span>
-                    Met een klein beetje wiskunde (<code>Math.floor</code>) berekent het script in welke van de 6 rijen
-                    je momenteel aan het typen bent. Vervolgens gebruikt hij de <code>isRowComplete</code> functie die
-                    we eerder hebben gemaakt. Heb je 6 letters getypt en is de rij vol? Dan roept hij de
-                    <code>checkRow</code> functie aan om je antwoord vast te zetten.
+                    <span class="accentText">Controleren of je klaar bent:</span>
+                    Het script berekent welke rij je aan het vullen bent en controleert of alle 6 letters zijn ingevuld. Zo ja, dan wordt je antwoord vastgezet.
                 </li>
                 <li>
-                    <span class="accentText">Klaarzetten voor de volgende poging:</span>
-                    Als je gok is vastgezet, berekent het spel razendsnel waar de volgende rij begint
-                    (<code>nextRowStart</code>). Als je nog pogingen over hebt, zet hij je cursor automatisch in het
-                    eerste vakje van die nieuwe rij, zodat je in één vloeiende beweging verder kunt spelen.
+                    <span class="accentText">Klaar voor de volgende poging:</span>
+                    Na je gok springt de cursor automatisch naar de volgende rij zodat je direct verder kunt spelen.
                 </li>
             </ul>
             </p>
@@ -751,28 +679,19 @@
             <div class="infoBlockImage">
                 <img src="img\img-event-lissener-3.png" alt="">
             </div>
-            <p><span class="accentText">Wat doet dit nieuw stukje code nu?</span> Herinner je je het voorbeeld van de
-                portier nog? Dit is de exacte code die ervoor zorgt dat spelers niet vals kunnen spelen door zomaar
-                ergens op het bord te klikken. Het werkt in drie slimme stappen:</p>
+            <p><span class="accentText">Wat doet deze code?</span> Dit voorkomt vals spelen. De code werkt in drie stappen:</p>
             <ul>
                 <li>
-                    <span class="accentText">1. Waar heb je geklikt? (currentRowStart):</span>
-                    Zodra je op een vakje klikt (het vakje krijgt 'focus'), berekent het script door middel van wat
-                    wiskunde in welke van de rijen dit specifieke vakje zich bevindt.
+                    <span class="accentText">1. In welke rij klik je?</span>
+                    Het script berekent in welke rij het vakje waar je op klikt zich bevindt.
                 </li>
                 <li>
-                    <span class="accentText">2. Waar hoor je te zijn? (firstEnabledRowStart):</span>
-                    Vervolgens scant de code met een zogenaamde for-loop het hele speelveld van boven naar
-                    beneden. Hij zoekt en stopt (<code>break</code>) bij de allereerste rij die nog niet is
-                    uitgeschakeld (<code>disabled</code>). Dit is de huidige, actieve beurt van de speler.
+                    <span class="accentText">2. Welke rij mag actief zijn?</span>
+                    Het script zoekt de eerste rij die nog niet "uitgeschakeld" is. Dit is jouw huidige beurt.
                 </li>
                 <li>
-                    <span class="accentText">3. De portier grijpt in (If / Else):</span>
-                    Nu vergelijkt de code deze twee locaties met elkaar. Klikte je inderdaad in de actieve rij? Dan is
-                    alles goed (de <code>if</code>) en wordt je letter netjes geselecteerd (<code>input.select()</code>)
-                    zodat je die makkelijk kunt aanpassen. Maar klikte je stiekem op een oude, al geraden rij, of juist
-                    een rij in de toekomst? Dan grijpt de <code>else</code> in en wordt je cursor genadeloos
-                    teruggestuurd naar het eerste vakje van de juiste rij!
+                    <span class="accentText">3. Toestemming geven of weigeren:</span>
+                    Klik je in de juiste rij? Prima! Je letter wordt geselecteerd. Klik je in een oude rij of een rij in de toekomst? Dan springt je cursor terug naar de rij waar je hoort te zijn.
                 </li>
             </ul>
             <b>Wat we nu hebben gemaakt:</b>
@@ -782,9 +701,8 @@
         </div>
         <div>
             <h3>game Logica</h3>
-            <p>nu gaan we de checkrow functie uitbreiden zodat we kunnen controleren of de ingevoerde woorden
-                correct
-                zijn, tonen welke letter juist zijn en tonen welke letters er in zitten.</p>
+            <p>Nu gaan we de <code>checkRow</code> functie uitbreiden zodat we kunnen controleren of de woorden correct zijn en de juiste letters tonen (groen voor correct, oranje voor verkeerd positie).
+            </p>
             <div>
                 <h4>
                     STAP 2: Groene letters markeren 🟩
@@ -969,7 +887,244 @@
                 </div>
             </div>
         </div>
+        <div>
+            <br><br>
+            <h4>
+                popup modal uitleg
+            </h4>
+            <p>als je een woord raadt, wordt het win-modal getoond. en als je alle trys hebt gebruikt, wordt het verlies-modal getoond. (stap 6 & 7)</p>
+            <br>
+            <div>
+                <img src="img/img-show-modal.png" alt="">
+            </div>
+            <br>
+            <div class="copyButton">
+                <button onclick="copyCode('jsModalSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsModalSnippet"><code>
+            // Function to show win/lose modal
+            function showWinModal(isWin) {
+        const modal = document.getElementById('winModal');
+        const resultElement = document.getElementById('result');
+        const winWordElement = document.getElementById('winWord');
+        const closeButton = document.getElementById('closeModal');
+        const tutorialBtn = document.getElementById('tutorialBtn');
+    
+        if (isWin) {
+            resultElement.textContent = '🎉 YOU WON!!! 🎉';
+        } else {
+            resultElement.textContent = 'Helaas! Probeer opnieuw.';
+        }
+    
+        winWordElement.textContent = word;
+        modal.classList.remove('hidden');
+        
+        closeButton.addEventListener('click', () => {
+            location.reload(); // Reload page to play again
+        });
+        
+        tutorialBtn.addEventListener('click', () => {
+            window.location.href = './tutorial.html'; // Go to tutorial page
+        });
+    }
+                        </code></pre>
+        <div>
+            <p>
+                Deze functie toont een pop-up aan het einde van het spel. Het pakt eerst alle knoppen en tekstvakken uit de HTML, controleert of je hebt gewonnen of verloren en toont het juiste bericht met een emoji ('🎉 YOU WON!!!' als je wint, of 'Helaas! Probeer opnieuw.' als je verliest), plus het geheime woord dat je moest raden. Daarna verwijdert het de hidden class zodat de pop-up zichtbaar wordt.
+            </p>
+            <br>
+            <p>Tot slot voegt het twee klikfuncties toe: als je op de sluitknop klikt, wordt de pagina herladen zodat je opnieuw kunt spelen; als je op de tutorial-knop klikt, ga je naar de tutorial pagina. Kortom: het is het "game over"-scherm dat jou feliciteert of aanmoedigt om opnieuw te proberen. </p>
+        </div>
+    
+        </div>
+        <br><br>
+        <h4>we willen juist nog een woord kiezen voor het spel</h4>
+        <br>
+        <div>
+            <img src="img/img-word-loader.png" alt="Code voorbeeld van het laden van een willekeurig woord">
+        </div>
+        <div><br>
+            <p>Deze functie kiest een willekeurig woord dat je moet raden. Hier's hoe het werkt:</p>
+            <ul>
+                <li>
+                    Woorden-bestand ophalen - Het download het bestand words.json van je server
+                </li>
+                <li>Data omzetten - Het zet de gedownloade data om naar JSON (een leesbaar formaat)</li>
+                <li>Woordenlijst pakken - Het haalt de array met alle woorden eruit (data.words)</li>
+                <li>Willekeurig woord kiezen - Met Math.random() kiest het een willekeurig getal en met Math.floor() maakt het ervan een heel getal, zodat het een willekeurig woord uit de lijst kan selecteren</li>
+                <li>Woord in HOOFDLETTERS zetten - Met .toUpperCase() zet het het woord om naar alleen HOOFDLETTERS</li>
+            </ul>
+            <br>
+            <div class="copyButton">
+                <button onclick="copyCode('jsWordLoader')">Kopieer</button>
+            </div>
+             <pre id="jsWordLoader"><code>
+               let word = ''; // This will be replaced by a random word in a real game
+
+
+                // Load and get random word from words.json
+                async function loadRandomWord() {
+                    try {
+                        const response = await fetch('./words.json');
+                        const data = await response.json();
+                        const wordList = data.words;
+                        word = wordList[Math.floor(Math.random() * wordList.length)].toUpperCase();
+                        console.log('Secret word loaded:', word);
+                    } catch (error) {
+                        console.error('Error loading words:', error);
+                    }
+                    // word = 'ADVIES';
+                }
+
+                // Load the word when page loads
+                loadRandomWord();
+                            </code></pre>
+                <i>Plak deze code bovenaan je game.js, onder de `const inputs` regel.</i>
+                <br><br>
+        </div>
     </div>
+    
+    <div class="infoBlock">
+        <div class="infoBlockTitle">
+            <h2>Stap 5B: Kleuren voor feedback (CSS)</h2>
+        </div>
+        <p>Nu voegen we nog twee klasses toe voor de kleuren die tonen of je antwoord juist is. Deze CSS maken we in het game.css bestand:</p>
+        <i>de reden dat we dit nu doen en niet eerder is omdat we de styling pas nodig hebben als we de feedback willen tonen</i>
+        <div class="copyButton">
+            <button onclick="copyCode('cssColorSnippet')">Kopieer</button>
+        </div>
+        <pre id="cssColorSnippet"><code>
+        .green {
+            background-color: green;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+        </code></pre>
+        <p><span class="accentText">Wat doen deze klasses?</span> Deze kleuren geven feedback aan de speler:</p>
+        <ul>
+            <li><span class="accentText">Groen (.green)</span> — Betekent dat de letter op de juiste positie staat (juist!).</li>
+            <li><span class="accentText">Oranje (.orange)</span> — Betekent dat de letter in het woord voorkomt, maar op de verkeerde positie staat.</li>
+        </ul>
+        <p>Deze klasses voeg je straks toe met JavaScript. Als een letter correct is, zeg je <code>input.classList.add('green')</code>. Zo weet CSS wat kleur het vakje moet zijn.</p>
+        <div class="infoBlockImage">
+            <img src="img/img-kleur-input.png" alt="afbeelding van groene en oranje gekleurde input velden">
+        </div>
+    </div>
+
+    <div class="infoBlock">
+        <div class="infoBlockTitle">
+            <h2>Stap 5C: Modal styling (CSS)</h2>
+        </div>
+        <p>Nu gaan we de CSS styling voor het pop-up venster (modal) toevoegen dat verschijnt als je wint of verliest. Voeg deze code toe aan je game.css:</p>
+        <div class="copyButton">
+            <button onclick="copyCode('cssModalSnippet')">Kopieer</button>
+        </div>
+        <pre id="cssModalSnippet"><code>
+        /* Modal Styling */
+        .modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 1000;
+          font-family: "Smooch Sans", sans-serif;
+          margin: auto;
+        }
+
+        .modal.hidden {
+          display: none;
+        }
+
+        .modal-content {
+          background-color: var(--primary-light);
+          padding: var(--large-spacing);
+          border-radius: var(--small-spacing);
+          border: 2px solid var(--primary-accent-color);
+          text-align: center;
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+          max-width: 400px;
+        }
+
+        .modal-content h2 {
+          font-size: var(--large-spacing);
+          margin-bottom: var(--medium-spacing);
+          color: var(--primary-accent-color);
+        }
+
+        .modal-content p {
+          font-size: 1.5rem;
+          margin-bottom: var(--large-spacing);
+          color: var(--primary-text-color);
+        }
+
+        .modal-buttons {
+          display: flex;
+          gap: var(--medium-spacing);
+          justify-content: center;
+        }
+
+        .modal-button {
+          background-color: var(--primary-accent-color);
+          color: white;
+          border: none;
+          padding: 0.75rem 2rem;
+          font-size: 1.2rem;
+          border-radius: var(--small-spacing);
+          cursor: pointer;
+          font-family: "Smooch Sans", sans-serif;
+          font-weight: var(--medium-font-weight);
+          transition: background-color 0.3s;
+        }
+
+        .modal-button:hover {
+          background-color: #6fb388;
+        }
+
+        .modal-button-secondary {
+          background-color: var(--primary-dark);
+          color: white;
+        }
+
+        .modal-button-secondary:hover {
+          background-color: #333333;
+        }
+        </code></pre>
+        <p><span class="accentText">Wat doen deze klasses?</span> Deze styling bepaalt hoe het pop-up venster eruit ziet:</p>
+        <ul>
+            <li><span class="accentText">.modal</span> — Het hele scherm (achtergrond met zwarte overlay).</li>
+            <li><span class="accentText">.modal.hidden</span> — Verbergt het venster met <code>display: none</code>.</li>
+            <li><span class="accentText">.modal-content</span> — De witte box met de titel, tekst en knoppen.</li>
+            <li><span class="accentText">.modal-button</span> — De groene knop (normaal) en hover effect (als je er overheen gaat).</li>
+            <li><span class="accentText">.modal-button-secondary</span> — De donkere knop (alternatief).</li>
+        </ul>
+        <div class="infoBlockImage">
+            <img src="img/img-modal-css.png" alt="afbeelding van de modal popup styling in de browser">
+        </div>
+        <p><span class="accentText">Let op:</span> De afbeelding hierboven toont een preview van het modal, maar deze is niet volledige. De code snippet hierboven bevat alle CSS die je nodig hebt!</p>
+    </div>
+    <div class="infoBlock">
+        <div class="infoBlockTitle">
+            <h2>Gefeliciteerd! 🎉</h2>
+        </div>
+        <p>Je hebt nu alle stappen doorlopen om je eigen Wordle game te maken! Je hebt geleerd hoe je HTML gebruikt voor de structuur, CSS voor de styling, en JavaScript voor de interactiviteit. Dit zijn de essentiële bouwstenen van elke moderne website.</p>
+        <p>Wat je hebt geleerd:</p>
+        <ul>
+            <li>HTML structuur opbouwen</li>
+            <li>Websites stylen met CSS</li>
+            <li>Interactieve elementen maken met JavaScript</li>
+            <li>Event listeners gebruiken</li>
+            <li>Logica implementeren voor spelregels</li>
+        </ul>
+        <p><span class="accentText">Volgende stap?</span> Speel je eigen game en zie hoe alles samen werkt! Je kunt ook experimenteren en aanpassingen maken om je game nog beter te maken.</p>
+    </div>
+
     <div class="buttons">
         <a class="button" href="game.html">Ga naar het spel</a>
     </div>

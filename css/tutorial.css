@@ -81,4 +81,5 @@ pre {
   background-color: var(--primary-color);
   padding: var(--medium-small-spacing);
   border-radius: var(--small-spacing);
+  margin-top: var(--small-spacing);
 }

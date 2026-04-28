@@ -14,7 +14,7 @@ async function loadRandomWord() {
     } catch (error) {
         console.error('Error loading words:', error);
     }
-    // word = 'ADVIES';
+    word = 'ADVIES';
 }
 
 // Load the word when page loads

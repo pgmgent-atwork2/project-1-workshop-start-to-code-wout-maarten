@@ -77,9 +77,15 @@
   }
 }
 
-pre {
-  background-color: var(--primary-color);
-  padding: var(--medium-small-spacing);
-  border-radius: var(--small-spacing);
-  margin-top: var(--small-spacing);
+ pre {
+    background-color: #f0f0f0 !important;
+    color: #333 !important;
+    border: 2px solid #88c59f;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+pre code {
+    background-color: transparent !important;
+    color: inherit !important;
 }

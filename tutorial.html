@@ -27,7 +27,6 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-vsc-dark-plus.min.css">
 
-
     <title>Game Tutorial</title>
 </head>
 
@@ -140,7 +139,7 @@
         <div class="copyButton">
             <button onclick="copyCode('codeSnippet')">Kopieer</button>
         </div>
-        <pre id="codeSnippet"><code  class="language-html">&lt;!DOCTYPE html&gt;
+        <pre id="codeSnippet"><code class="language-html">&lt;!DOCTYPE html&gt;
     &lt;html lang="en"&gt;
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
@@ -192,7 +191,7 @@
         <div class="copyButton">
             <button onclick="copyCode('titleSnippet')">Kopieer</button>
         </div>
-        <pre id="titleSnippet"><code>class="title"&gt;
+        <pre id="titleSnippet"><code class="language-html">&lt;section class="title"&gt;
             &lt;h1&gt;
                 WORDLE GAME
             &lt;/h1&gt;
@@ -217,7 +216,7 @@
         <div class="copyButton">
             <button onclick="copyCode('inputSnippet')">Kopieer</button>
         </div>
-        <pre id="inputSnippet"><code>class="block"&gt;
+        <pre id="inputSnippet"><code class="language-html">&lt;section class="block"&gt;
             &lt;div class="woord" id="input1"&gt;
                 &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
                 &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
@@ -326,7 +325,7 @@
         <div class="copyButton">
             <button onclick="copyCode('cssLinkSnippet')">Kopieer</button>
         </div>
-        <pre id="cssLinkSnippet"><code>="stylesheet" href="style.css"&gt;
+        <pre id="cssLinkSnippet"><code class="language-html">&lt;link rel="stylesheet" href="style.css"&gt;
         </code></pre>
 
         <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we styling toevoegen gaat dit wel
@@ -346,7 +345,7 @@
         <div class="copyButton">
             <button onclick="copyCode('googleFontsSnippet')">Kopieer</button>
         </div>
-        <pre id="googleFontsSnippet"><code>="preconnect" href="https://fonts.googleapis.com"&gt;
+        <pre id="googleFontsSnippet"><code class="language-html">&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
         &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
         &lt;link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&amp;display=swap" rel="stylesheet"&gt;
         </code></pre>
@@ -364,7 +363,8 @@
         <div class="copyButton">
             <button onclick="copyCode('titleCssSnippet')">Kopieer</button>
         </div>
-        <pre id="titleCssSnippet"><code>         font-family: "Smooch Sans", sans-serif;
+        <pre id="titleCssSnippet"><code class="language-css">.title {
+            font-family: "Smooch Sans", sans-serif;
             font-size: 2.5rem;;
             text-align: center;
             margin-bottom: 2rem;
@@ -396,7 +396,8 @@
         <div class="copyButton">
             <button onclick="copyCode('cssInputStyling')">Kopieer</button>
         </div>
-        <pre id="cssInputStyling"><code>        width: 4rem;
+        <pre id="cssInputStyling"><code class="language-css">input {
+            width: 4rem;
             aspect-ratio: 1/1;
             text-align: center;
             font-size: 1.5rem;
@@ -430,7 +431,7 @@
         <div class="copyButton">
             <button onclick="copyCode('cssBlock')">Kopieer</button>
         </div>
-        <pre id="cssBlock"><code>
+        <pre id="cssBlock"><code class="language-css">.block {
                 text-align: center;
                 display: flex;
                 flex-direction: column;
@@ -472,7 +473,7 @@
         <div class="copyButton">
             <button onclick="copyCode('jsLinkSnippet')">Kopieer</button>
         </div>
-        <pre id="jsLinkSnippet"><code>pt src="js/game.js"&gt;&lt;/script&gt;
+        <pre id="jsLinkSnippet"><code class="language-html">&lt;script src="js/game.js"&gt;&lt;/script&gt;
         </code></pre>
         <div class="infoBlockImage">
             <img src="img/img-js-add-to-html.png" alt="afbeelding van de script tag in de index.html">
@@ -485,7 +486,7 @@
         <div class="copyButton">
             <button onclick="copyCode('jsInputsSnippet')">Kopieer</button>
         </div>
-        <pre id="jsInputsSnippet"><code>puts = [...document.querySelectorAll('.woord input')];
+        <pre id="jsInputsSnippet"><code class="language-javascript">const inputs = [...document.querySelectorAll('.woord input')];
         </code></pre>
         <p>Als je dit dan toegevoegd hebt ziet je script.js er als volgt uit:</p>
 
@@ -506,7 +507,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsKeydownSnippet')">Kopieer</button>
             </div>
-            <pre id="jsKeydownSnippet"><code>orEach((input, i) => {
+            <pre id="jsKeydownSnippet"><code class="language-javascript">inputs.forEach((input, i) => {
                 input.addEventListener('keydown', e => {
                     if (input.disabled) return;
                     
@@ -566,7 +567,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsRowFunctionsSnippet')">Kopieer</button>
             </div>
-            <pre id="jsRowFunctionsSnippet"><code>ttersPerRow = 6;
+            <pre id="jsRowFunctionsSnippet"><code class="language-javascript">const lettersPerRow = 6;
 
             function isRowComplete(startIndex) {
                 const endIndex = startIndex + lettersPerRow;
@@ -619,7 +620,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsInputListenerSnippet')">Kopieer</button>
             </div>
-            <pre id="jsInputListenerSnippet"><code>dEventListener('input', e => {
+            <pre id="jsInputListenerSnippet"><code class="language-javascript">input.addEventListener('input', e => {
                 if (input.disabled) return;
                 
                 input.value = input.value.replace(/[^a-zA-Z]/g, ''); // letters only
@@ -694,7 +695,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsFocusListenerSnippet')">Kopieer</button>
             </div>
-            <pre id="jsFocusListenerSnippet"><code>dEventListener('focus', () => {
+            <pre id="jsFocusListenerSnippet"><code class="language-javascript">input.addEventListener('focus', () => {
                 // Check which row this input is in
                 const currentRowStart = Math.floor(i / lettersPerRow) * lettersPerRow;
                 
@@ -767,7 +768,7 @@
                 <div class="copyButton">
                     <button onclick="copyCode('jsGreenLettersSnippet')">Kopieer</button>
                 </div>
-                <pre id="jsGreenLettersSnippet"><code>TEP 2: Mark GREEN letters (correct position)
+                <pre id="jsGreenLettersSnippet"><code class="language-javascript">// STEP 2: Mark GREEN letters (correct position)
                 const greenLetters = {};
                 rowInputs.forEach((input, index) => {
                     const letter = input.value.toUpperCase();
@@ -799,7 +800,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsCountLettersSnippet')">Kopieer</button>
             </div>
-            <pre id="jsCountLettersSnippet"><code>TEP 3: Count all letters in secret word
+            <pre id="jsCountLettersSnippet"><code class="language-javascript">// STEP 3: Count all letters in secret word
                 const availableLetters = {};
                 for (let i = 0; i < word.length; i++) {
                     const letter = word[i];
@@ -827,7 +828,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsRemoveGreensSnippet')">Kopieer</button>
             </div>
-            <pre id="jsRemoveGreensSnippet"><code>TEP 4: Remove greens from available pool (avoid double-counting)
+            <pre id="jsRemoveGreensSnippet"><code class="language-javascript">// STEP 4: Remove greens from available pool (avoid double-counting)
                 for (let letter in greenLetters) {
                     availableLetters[letter] -= greenLetters[letter];
                 }
@@ -854,7 +855,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsOrangeLettersSnippet')">Kopieer</button>
             </div>
-            <pre id="jsOrangeLettersSnippet"><code>TEP 5: Mark ORANGE letters (wrong position, but in word)
+            <pre id="jsOrangeLettersSnippet"><code class="language-javascript">// STEP 5: Mark ORANGE letters (wrong position, but in word)
                 rowInputs.forEach((input, index) => {
                     const letter = input.value.toUpperCase();
                     
@@ -886,7 +887,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsWinConditionSnippet')">Kopieer</button>
             </div>
-            <pre id="jsWinConditionSnippet"><code>ep 6: Check for win condition
+            <pre id="jsWinConditionSnippet"><code class="language-javascript">// Step 6: Check for win condition
                 if (Object.keys(greenLetters).length === word.length) {
                         inputs.forEach(input => {
                         input.disabled = true;
@@ -914,7 +915,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsLoseConditionSnippet')">Kopieer</button>
             </div>
-            <pre id="jsLoseConditionSnippet"><code>TEP 7: Check for lose condition (all inputs filled but not all green + no more rows)
+            <pre id="jsLoseConditionSnippet"><code class="language-javascript">// STEP 7: Check for lose condition (all inputs filled but not all green + no more rows)
                 else if (Object.keys(greenLetters).length < word.length && endIndex === inputs.length) {
                     inputs.forEach(input => {
                         input.disabled = true;
@@ -944,7 +945,7 @@
         <div class="copyButton">
             <button onclick="copyCode('jsModalSnippet')">Kopieer</button>
         </div>
-        <pre id="jsModalSnippet"><code>ion to show win/lose modal
+        <pre id="jsModalSnippet"><code class="language-javascript">// Function to show win/lose modal
             function showWinModal(isWin) {
         const modal = document.getElementById('winModal');
         const resultElement = document.getElementById('result');
@@ -1000,7 +1001,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsonFile')">Kopieer</button>
             </div>
-            <pre id="jsonFile"><code>{
+            <pre id="jsonFile"><code class="language-json">{
                     "words": [
                         "aanbod",
                         "aangst",
@@ -1027,7 +1028,7 @@
         <div class="copyButton">
             <button onclick="copyCode('jsWordLoader')">Kopieer</button>
         </div>
-        <pre id="jsWordLoader"><code>ord = ''; // This will be replaced by a random word in a real game
+        <pre id="jsWordLoader"><code class="language-javascript">let word = ''; // This will be replaced by a random word in a real game
 
 
                 // Load and get random word from words.json
@@ -1063,7 +1064,8 @@
         <div class="copyButton">
             <button onclick="copyCode('cssColorSnippet')">Kopieer</button>
         </div>
-        <pre id="cssColorSnippet"><code>         background-color: green;
+        <pre id="cssColorSnippet"><code class="language-css">.green {
+            background-color: green;
         }
 
         .orange {
@@ -1094,7 +1096,7 @@
         <div class="copyButton">
             <button onclick="copyCode('cssModalSnippet')">Kopieer</button>
         </div>
-        <pre id="cssModalSnippet"><code>ling */
+        <pre id="cssModalSnippet"><code class="language-css">/* Modal Styling */
         .modal {
           position: fixed;
           top: 0;
@@ -1212,7 +1214,7 @@
         </div>
 
         <footer class="footer">
-            <p>word guesser tutorial game - created by Maarten & Wout</p>
+            <p>word guesser tutorial game - created by Maarten Ighade & Wout Galmart</p>
         </footer>
 
         <script src=" js/copycode.js"></script>

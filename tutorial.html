@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/tutorial.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-vsc-dark-plus.min.css">
+
+
     <title>Game Tutorial</title>
 </head>
 
@@ -135,7 +140,7 @@
         <div class="copyButton">
             <button onclick="copyCode('codeSnippet')">Kopieer</button>
         </div>
-        <pre id="codeSnippet"><code>&lt;!DOCTYPE html&gt;
+        <pre id="codeSnippet"><code  class="language-html">&lt;!DOCTYPE html&gt;
     &lt;html lang="en"&gt;
     &lt;head&gt;
         &lt;meta charset="UTF-8"&gt;
@@ -187,8 +192,7 @@
         <div class="copyButton">
             <button onclick="copyCode('titleSnippet')">Kopieer</button>
         </div>
-        <pre id="titleSnippet"><code>
-        &lt;section class="title"&gt;
+        <pre id="titleSnippet"><code>class="title"&gt;
             &lt;h1&gt;
                 WORDLE GAME
             &lt;/h1&gt;
@@ -213,8 +217,7 @@
         <div class="copyButton">
             <button onclick="copyCode('inputSnippet')">Kopieer</button>
         </div>
-        <pre id="inputSnippet"><code>
-        &lt;section class="block"&gt;
+        <pre id="inputSnippet"><code>class="block"&gt;
             &lt;div class="woord" id="input1"&gt;
                 &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
                 &lt;input type="text" inputmode="char" maxlength="1" autocomplete="off"&gt;
@@ -323,8 +326,7 @@
         <div class="copyButton">
             <button onclick="copyCode('cssLinkSnippet')">Kopieer</button>
         </div>
-        <pre id="cssLinkSnippet"><code>
-        &lt;link rel="stylesheet" href="style.css"&gt;
+        <pre id="cssLinkSnippet"><code>="stylesheet" href="style.css"&gt;
         </code></pre>
 
         <p>Indien we deze code kopieren is er visueel niks veranderd maar zodra we styling toevoegen gaat dit wel
@@ -344,8 +346,7 @@
         <div class="copyButton">
             <button onclick="copyCode('googleFontsSnippet')">Kopieer</button>
         </div>
-        <pre id="googleFontsSnippet"><code>
-        &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+        <pre id="googleFontsSnippet"><code>="preconnect" href="https://fonts.googleapis.com"&gt;
         &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
         &lt;link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&amp;display=swap" rel="stylesheet"&gt;
         </code></pre>
@@ -363,9 +364,7 @@
         <div class="copyButton">
             <button onclick="copyCode('titleCssSnippet')">Kopieer</button>
         </div>
-        <pre id="titleCssSnippet"><code>
-        .title {
-            font-family: "Smooch Sans", sans-serif;
+        <pre id="titleCssSnippet"><code>         font-family: "Smooch Sans", sans-serif;
             font-size: 2.5rem;;
             text-align: center;
             margin-bottom: 2rem;
@@ -397,9 +396,7 @@
         <div class="copyButton">
             <button onclick="copyCode('cssInputStyling')">Kopieer</button>
         </div>
-        <pre id="cssInputStyling"><code>
-        input {
-            width: 4rem;
+        <pre id="cssInputStyling"><code>        width: 4rem;
             aspect-ratio: 1/1;
             text-align: center;
             font-size: 1.5rem;
@@ -434,7 +431,6 @@
             <button onclick="copyCode('cssBlock')">Kopieer</button>
         </div>
         <pre id="cssBlock"><code>
-            .block {
                 text-align: center;
                 display: flex;
                 flex-direction: column;
@@ -476,8 +472,7 @@
         <div class="copyButton">
             <button onclick="copyCode('jsLinkSnippet')">Kopieer</button>
         </div>
-        <pre id="jsLinkSnippet"><code>
-            &lt;script src="js/game.js"&gt;&lt;/script&gt;
+        <pre id="jsLinkSnippet"><code>pt src="js/game.js"&gt;&lt;/script&gt;
         </code></pre>
         <div class="infoBlockImage">
             <img src="img/img-js-add-to-html.png" alt="afbeelding van de script tag in de index.html">
@@ -490,8 +485,7 @@
         <div class="copyButton">
             <button onclick="copyCode('jsInputsSnippet')">Kopieer</button>
         </div>
-        <pre id="jsInputsSnippet"><code>
-            const inputs = [...document.querySelectorAll('.woord input')];
+        <pre id="jsInputsSnippet"><code>puts = [...document.querySelectorAll('.woord input')];
         </code></pre>
         <p>Als je dit dan toegevoegd hebt ziet je script.js er als volgt uit:</p>
 
@@ -512,8 +506,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsKeydownSnippet')">Kopieer</button>
             </div>
-            <pre id="jsKeydownSnippet"><code>
-            inputs.forEach((input, i) => {
+            <pre id="jsKeydownSnippet"><code>orEach((input, i) => {
                 input.addEventListener('keydown', e => {
                     if (input.disabled) return;
                     
@@ -573,8 +566,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsRowFunctionsSnippet')">Kopieer</button>
             </div>
-            <pre id="jsRowFunctionsSnippet"><code>
-            const lettersPerRow = 6;
+            <pre id="jsRowFunctionsSnippet"><code>ttersPerRow = 6;
 
             function isRowComplete(startIndex) {
                 const endIndex = startIndex + lettersPerRow;
@@ -614,8 +606,8 @@
                     <span class="accentText">Functie checkRow (De rij blokkeren):</span>
                     Dit is het begin van de functie die straks gaat checken of je het woord goed hebt geraden (met de
                     groene en oranje kleuren). In deze eerste stap doet hij nog maar één ding: het beveiligen van je
-                    gok. Hij pakt de 6 vakjes, schakelt ze uit (<code>disabled = true</code>) en maakt ze een beetje
-                    doorzichtig (<code>opacity = '0.5'</code>). Zo kan de speler zijn letters niet meer stiekem
+                    gok. Hij pakt de 6 vakjes, schakelt ze uit (<code>>) en maakt ze een beetje
+                    doorzichtig (<code>>). Zo kan de speler zijn letters niet meer stiekem
                     veranderen!
                 </li>
             </ul>
@@ -627,8 +619,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsInputListenerSnippet')">Kopieer</button>
             </div>
-            <pre id="jsInputListenerSnippet"><code>
-            input.addEventListener('input', e => {
+            <pre id="jsInputListenerSnippet"><code>dEventListener('input', e => {
                 if (input.disabled) return;
                 
                 input.value = input.value.replace(/[^a-zA-Z]/g, ''); // letters only
@@ -646,16 +637,17 @@
                 }
             });
         </code></pre>
-            <p>Voeg deze code toe onder je keydown event listener. Het geselecteerde deel is de nieuwe code:</p>
-            <div class="infoBlockImage">
-                <img src="img\img-event-lissener-2.png" alt="">
-            </div>
-            <p><span class="accentText">Wat doet deze code?</span> Dit is het hart van het spel. Het luistert naar je
-                invoer en werkt in vier stappen:</p>
-            <ul>
-                <li>
-                    <span class="accentText">Alleen letters toegestaan:</span>
-                    De code <code>/[^a-zA-Z]/g</code> is een "regex" (reguliere expressie). Dit is een beveiliger: als
+                    <p>Voeg deze code toe onder je keydown event listener. Het geselecteerde deel is de nieuwe code:</p>
+                    <div class="infoBlockImage">
+                        <img src="img\img-event-lissener-2.png" alt="">
+                    </div>
+                    <p><span class="accentText">Wat doet deze code?</span> Dit is het hart van het spel. Het luistert
+                        naar je
+                        invoer en werkt in vier stappen:</p>
+                    <ul>
+                        <li>
+                            <span class="accentText">Alleen letters toegestaan:</span>
+                            De code <code>s een "regex" (reguliere expressie). Dit is een beveiliger: als
                     je een cijfer (8) of leesteken (@) typt, wordt dit onmiddellijk verwijderd. Alleen letters worden
                     toegelaten.
                 </li>
@@ -702,8 +694,7 @@
             <div class="copyButton">
                 <button onclick="copyCode('jsFocusListenerSnippet')">Kopieer</button>
             </div>
-            <pre id="jsFocusListenerSnippet"><code>
-            input.addEventListener('focus', () => {
+            <pre id="jsFocusListenerSnippet"><code>dEventListener('focus', () => {
                 // Check which row this input is in
                 const currentRowStart = Math.floor(i / lettersPerRow) * lettersPerRow;
                 
@@ -725,35 +716,39 @@
                 }
             });
                 </code></pre>
-            <p>Deze code plak je onder de code van de vorige stap (het geselecteerde gedeelte is de nieuwe code).</p>
-            <div class="infoBlockImage">
-                <img src="img\img-event-lissener-3.png" alt="">
-            </div>
-            <p><span class="accentText">Wat doet deze code?</span> Dit voorkomt vals spelen. De code werkt in drie
-                stappen:</p>
-            <ul>
-                <li>
-                    <span class="accentText">1. In welke rij klik je?</span>
-                    Het script berekent in welke rij het vakje waar je op klikt zich bevindt.
-                </li>
-                <li>
-                    <span class="accentText">2. Welke rij mag actief zijn?</span>
-                    Het script zoekt de eerste rij die nog niet "uitgeschakeld" is. Dit is jouw huidige beurt.
-                </li>
-                <li>
-                    <span class="accentText">3. Toestemming geven of weigeren:</span>
-                    Klik je in de juiste rij? Prima! Je letter wordt geselecteerd. Klik je in een oude rij of een rij in
-                    de toekomst? Dan springt je cursor terug naar de rij waar je hoort te zijn.
-                </li>
-            </ul>
-            <b>Wat we nu hebben gemaakt:</b>
-            <div class="infoBlockImage">
-                <img src="img\img-event-lissener-resultaat-3.png" alt="">
-            </div>
+                            <p>Deze code plak je onder de code van de vorige stap (het geselecteerde gedeelte is de
+                                nieuwe code).</p>
+                            <div class="infoBlockImage">
+                                <img src="img\img-event-lissener-3.png" alt="">
+                            </div>
+                            <p><span class="accentText">Wat doet deze code?</span> Dit voorkomt vals spelen. De code
+                                werkt in drie
+                                stappen:</p>
+                            <ul>
+                                <li>
+                                    <span class="accentText">1. In welke rij klik je?</span>
+                                    Het script berekent in welke rij het vakje waar je op klikt zich bevindt.
+                                </li>
+                                <li>
+                                    <span class="accentText">2. Welke rij mag actief zijn?</span>
+                                    Het script zoekt de eerste rij die nog niet "uitgeschakeld" is. Dit is jouw huidige
+                                    beurt.
+                                </li>
+                                <li>
+                                    <span class="accentText">3. Toestemming geven of weigeren:</span>
+                                    Klik je in de juiste rij? Prima! Je letter wordt geselecteerd. Klik je in een oude
+                                    rij of een rij in
+                                    de toekomst? Dan springt je cursor terug naar de rij waar je hoort te zijn.
+                                </li>
+                            </ul>
+                            <b>Wat we nu hebben gemaakt:</b>
+                            <div class="infoBlockImage">
+                                <img src="img\img-event-lissener-resultaat-3.png" alt="">
+                            </div>
         </div>
         <div>
             <h3>game Logica</h3>
-            <p>Nu gaan we de <code>checkRow</code> functie uitbreiden zodat we kunnen controleren of de woorden correct
+            <p>Nu gaan we de <code>ie uitbreiden zodat we kunnen controleren of de woorden correct
                 zijn en de juiste letters tonen (groen voor correct, oranje voor verkeerd positie).
             </p>
             <div>
@@ -772,8 +767,7 @@
                 <div class="copyButton">
                     <button onclick="copyCode('jsGreenLettersSnippet')">Kopieer</button>
                 </div>
-                <pre id="jsGreenLettersSnippet"><code>
-                // STEP 2: Mark GREEN letters (correct position)
+                <pre id="jsGreenLettersSnippet"><code>TEP 2: Mark GREEN letters (correct position)
                 const greenLetters = {};
                 rowInputs.forEach((input, index) => {
                     const letter = input.value.toUpperCase();
@@ -784,86 +778,83 @@
                     }
                 });
                     </code></pre>
-                <p>Deze code kan je netjes onder stap 1 plaatsen en dan komt je script.js er zo uit te zien:</p>
-                <div>
-                    <img src="img/img-checkrow-step-2.png" alt="">
-                </div>
-                </p>
-            </div>
-            <br>
+            <p>Deze code kan je netjes onder stap 1 plaatsen en dan komt je script.js er zo uit te zien:</p>
             <div>
-                <h4>
-                    STAP 3: Alle letters in geheim woord tellen
-                </h4>
-                <p>
-                <ul>
-                    <li>Maakt een inventaris van alle beschikbare letters in het geheime woord</li>
-                    <li>
-                        Bijvoorbeeld: "ADVIES" = A(1x), D(1x), V(1x), I(1x), E(1x), S(1x)
-                    </li>
-                </ul>
-                <div class="copyButton">
-                    <button onclick="copyCode('jsCountLettersSnippet')">Kopieer</button>
-                </div>
-                <pre id="jsCountLettersSnippet"><code>
-                // STEP 3: Count all letters in secret word
+                <img src="img/img-checkrow-step-2.png" alt="">
+            </div>
+            </p>
+        </div>
+        <br>
+        <div>
+            <h4>
+                STAP 3: Alle letters in geheim woord tellen
+            </h4>
+            <p>
+            <ul>
+                <li>Maakt een inventaris van alle beschikbare letters in het geheime woord</li>
+                <li>
+                    Bijvoorbeeld: "ADVIES" = A(1x), D(1x), V(1x), I(1x), E(1x), S(1x)
+                </li>
+            </ul>
+            <div class="copyButton">
+                <button onclick="copyCode('jsCountLettersSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsCountLettersSnippet"><code>TEP 3: Count all letters in secret word
                 const availableLetters = {};
                 for (let i = 0; i < word.length; i++) {
                     const letter = word[i];
                     availableLetters[letter] = (availableLetters[letter] || 0) + 1;
                 }
                     </code></pre>
-                <p>Deze plaats je dan netjes onder stap 2.</p>
-                <div>
-                    <img src="img/img-checkrow-step-3.png" alt="">
-                </div>
-                </p>
-            </div>
-            <br>
+            <p>Deze plaats je dan netjes onder stap 2.</p>
             <div>
-                <h4>
-                    STAP 4: Groene letters van beschikbaarheid aftrekken
-                </h4>
-                <p>
-                <ul>
-                    <li>Omdat groene letters al "gebruikt" zijn, halen we ze uit de beschikbare pool</li>
-                    <li>
-                        Dit voorkomt dubbel tellen (belangrijk!)
-                    </li>
-                </ul>
-                <div class="copyButton">
-                    <button onclick="copyCode('jsRemoveGreensSnippet')">Kopieer</button>
-                </div>
-                <pre id="jsRemoveGreensSnippet"><code>
-                // STEP 4: Remove greens from available pool (avoid double-counting)
+                <img src="img/img-checkrow-step-3.png" alt="">
+            </div>
+            </p>
+        </div>
+        <br>
+        <div>
+            <h4>
+                STAP 4: Groene letters van beschikbaarheid aftrekken
+            </h4>
+            <p>
+            <ul>
+                <li>Omdat groene letters al "gebruikt" zijn, halen we ze uit de beschikbare pool</li>
+                <li>
+                    Dit voorkomt dubbel tellen (belangrijk!)
+                </li>
+            </ul>
+            <div class="copyButton">
+                <button onclick="copyCode('jsRemoveGreensSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsRemoveGreensSnippet"><code>TEP 4: Remove greens from available pool (avoid double-counting)
                 for (let letter in greenLetters) {
                     availableLetters[letter] -= greenLetters[letter];
                 }
                     </code></pre>
-                <p>Deze plaats je dan netjes onder stap 3.</p>
-                <div>
-                    <img src="img/img-checkrow-step-4.png" alt="">
-                </div>
-                </p>
-            </div>
-            <br>
+            <p>Deze plaats je dan netjes onder stap 3.</p>
             <div>
-                <h4>
-                    STAP 5: Oranje letters markeren 🟧
-                </h4>
-                <p>
-                <ul>
-                    <li>Voor letters die NIET groen zijn: controleert of ze nog beschikbaar zijn</li>
-                    <li>Zo ja: markeert als orange (juiste letter, verkeerde plaats) en trekkt 1 van de
-                        beschikbaarheid
-                        af</li>
-                    <li>Dit zorgt dat letters maximaal zoveel keer oranje worden gemarkeerd als ze voorkomen</li>
-                </ul>
-                <div class="copyButton">
-                    <button onclick="copyCode('jsOrangeLettersSnippet')">Kopieer</button>
-                </div>
-                <pre id="jsOrangeLettersSnippet"><code>
-                // STEP 5: Mark ORANGE letters (wrong position, but in word)
+                <img src="img/img-checkrow-step-4.png" alt="">
+            </div>
+            </p>
+        </div>
+        <br>
+        <div>
+            <h4>
+                STAP 5: Oranje letters markeren 🟧
+            </h4>
+            <p>
+            <ul>
+                <li>Voor letters die NIET groen zijn: controleert of ze nog beschikbaar zijn</li>
+                <li>Zo ja: markeert als orange (juiste letter, verkeerde plaats) en trekkt 1 van de
+                    beschikbaarheid
+                    af</li>
+                <li>Dit zorgt dat letters maximaal zoveel keer oranje worden gemarkeerd als ze voorkomen</li>
+            </ul>
+            <div class="copyButton">
+                <button onclick="copyCode('jsOrangeLettersSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsOrangeLettersSnippet"><code>TEP 5: Mark ORANGE letters (wrong position, but in word)
                 rowInputs.forEach((input, index) => {
                     const letter = input.value.toUpperCase();
                     
@@ -876,27 +867,26 @@
                     }
                 });
                     </code></pre>
-                <p>Deze plaats je dan netjes onder stap 4.</p>
-                <div>
-                    <img src="img/img-checkrow-step-5.png" alt="">
-                </div>
-                </p>
-            </div>
-            <br>
+            <p>Deze plaats je dan netjes onder stap 4.</p>
             <div>
-                <h4>
-                    STAP 6: Win-check 🎉
-                </h4>
-                <p>
-                <ul>
-                    <li>Als alle letters in de rij groen zijn = GEWONNEN!</li>
-                    <li>Schakelt alle inputs uit en toont het win-modal</li>
-                </ul>
-                <div class="copyButton">
-                    <button onclick="copyCode('jsWinConditionSnippet')">Kopieer</button>
-                </div>
-                <pre id="jsWinConditionSnippet"><code>
-                //Step 6: Check for win condition
+                <img src="img/img-checkrow-step-5.png" alt="">
+            </div>
+            </p>
+        </div>
+        <br>
+        <div>
+            <h4>
+                STAP 6: Win-check 🎉
+            </h4>
+            <p>
+            <ul>
+                <li>Als alle letters in de rij groen zijn = GEWONNEN!</li>
+                <li>Schakelt alle inputs uit en toont het win-modal</li>
+            </ul>
+            <div class="copyButton">
+                <button onclick="copyCode('jsWinConditionSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsWinConditionSnippet"><code>ep 6: Check for win condition
                 if (Object.keys(greenLetters).length === word.length) {
                         inputs.forEach(input => {
                         input.disabled = true;
@@ -905,27 +895,26 @@
                     showWinModal(true);
                 }
                     </code></pre>
-                <div>
-                    <img src="img/img-checkrow-step-6.png" alt="">
-                </div>
-                </p>
-            </div>
             <div>
-                <h4>
-                    STAP 7: Verlies-check 😢
-                </h4>
-                <ul>
-                    <li>Als niet alle letters groen zijn én we bij het allerlaatste vakje van het bord zijn = VERLOREN!
-                    </li>
-                    <li>Schakelt (net als bij winst) alle inputs uit en opent de modal, maar geeft nu 'false' mee zodat
-                        het spel weet dat je niet gewonnen hebt.</li>
-                </ul>
+                <img src="img/img-checkrow-step-6.png" alt="">
+            </div>
+            </p>
+        </div>
+        <div>
+            <h4>
+                STAP 7: Verlies-check 😢
+            </h4>
+            <ul>
+                <li>Als niet alle letters groen zijn én we bij het allerlaatste vakje van het bord zijn = VERLOREN!
+                </li>
+                <li>Schakelt (net als bij winst) alle inputs uit en opent de modal, maar geeft nu 'false' mee zodat
+                    het spel weet dat je niet gewonnen hebt.</li>
+            </ul>
 
-                <div class="copyButton">
-                    <button onclick="copyCode('jsLoseConditionSnippet')">Kopieer</button>
-                </div>
-                <pre id="jsLoseConditionSnippet"><code>
-                // STEP 7: Check for lose condition (all inputs filled but not all green + no more rows)
+            <div class="copyButton">
+                <button onclick="copyCode('jsLoseConditionSnippet')">Kopieer</button>
+            </div>
+            <pre id="jsLoseConditionSnippet"><code>TEP 7: Check for lose condition (all inputs filled but not all green + no more rows)
                 else if (Object.keys(greenLetters).length < word.length && endIndex === inputs.length) {
                     inputs.forEach(input => {
                         input.disabled = true;
@@ -935,28 +924,27 @@
                 }
                             </code></pre>
 
-                <div>
-                    <img src="img/img-checkrow-step-7.png" alt="Code voorbeeld van de verlies-check">
-                </div>
+            <div>
+                <img src="img/img-checkrow-step-7.png" alt="Code voorbeeld van de verlies-check">
             </div>
         </div>
+    </div>
+    <div>
+        <br><br>
+        <h4>
+            popup modal uitleg
+        </h4>
+        <p>als je een woord raadt, wordt het win-modal getoond. en als je alle trys hebt gebruikt, wordt het
+            verlies-modal getoond. (stap 6 & 7)</p>
+        <br>
         <div>
-            <br><br>
-            <h4>
-                popup modal uitleg
-            </h4>
-            <p>als je een woord raadt, wordt het win-modal getoond. en als je alle trys hebt gebruikt, wordt het
-                verlies-modal getoond. (stap 6 & 7)</p>
-            <br>
-            <div>
-                <img src="img/img-show-modal.png" alt="">
-            </div>
-            <br>
-            <div class="copyButton">
-                <button onclick="copyCode('jsModalSnippet')">Kopieer</button>
-            </div>
-            <pre id="jsModalSnippet"><code>
-            // Function to show win/lose modal
+            <img src="img/img-show-modal.png" alt="">
+        </div>
+        <br>
+        <div class="copyButton">
+            <button onclick="copyCode('jsModalSnippet')">Kopieer</button>
+        </div>
+        <pre id="jsModalSnippet"><code>ion to show win/lose modal
             function showWinModal(isWin) {
         const modal = document.getElementById('winModal');
         const resultElement = document.getElementById('result');
@@ -982,38 +970,37 @@
         });
     }
                         </code></pre>
-            <div>
-                <p>
-                    Deze functie toont een pop-up aan het einde van het spel. Het pakt eerst alle knoppen en tekstvakken
-                    uit de HTML, controleert of je hebt gewonnen of verloren en toont het juiste bericht met een emoji
-                    ('🎉 YOU WON!!!' als je wint, of 'Helaas! Probeer opnieuw.' als je verliest), plus het geheime woord
-                    dat je moest raden. Daarna verwijdert het de hidden class zodat de pop-up zichtbaar wordt.
-                </p>
-                <br>
-                <p>Tot slot voegt het twee klikfuncties toe: als je op de sluitknop klikt, wordt de pagina herladen
-                    zodat je opnieuw kunt spelen; als je op de tutorial-knop klikt, ga je naar de tutorial pagina.
-                    Kortom: het is het "game over"-scherm dat jou feliciteert of aanmoedigt om opnieuw te proberen. </p>
-            </div>
-
-        </div>
-        <br><br>
-        <h4>we willen juist nog een woord kiezen voor het spel</h4>
-        <br>
         <div>
-            <img src="img/img-word-loader.png" alt="Code voorbeeld van het laden van een willekeurig woord">
+            <p>
+                Deze functie toont een pop-up aan het einde van het spel. Het pakt eerst alle knoppen en tekstvakken
+                uit de HTML, controleert of je hebt gewonnen of verloren en toont het juiste bericht met een emoji
+                ('🎉 YOU WON!!!' als je wint, of 'Helaas! Probeer opnieuw.' als je verliest), plus het geheime woord
+                dat je moest raden. Daarna verwijdert het de hidden class zodat de pop-up zichtbaar wordt.
+            </p>
+            <br>
+            <p>Tot slot voegt het twee klikfuncties toe: als je op de sluitknop klikt, wordt de pagina herladen
+                zodat je opnieuw kunt spelen; als je op de tutorial-knop klikt, ga je naar de tutorial pagina.
+                Kortom: het is het "game over"-scherm dat jou feliciteert of aanmoedigt om opnieuw te proberen. </p>
         </div>
-        <div><br>
-            <p>Deze functie kiest een willekeurig woord dat je moet raden. Hier's hoe het werkt:</p>
-            <ul>
-                <li>
-                    Woorden-bestand ophalen - Maak hiervoor een bestand aan genaamd "words.json" en zet hier een lijst
-                    van woorden in.
-                </li>
-                <div class="copyButton">
-                    <button onclick="copyCode('jsonFile')">Kopieer</button>
-                </div>
-                <pre id="jsonFile"><code>
-                    {
+
+    </div>
+    <br><br>
+    <h4>we willen juist nog een woord kiezen voor het spel</h4>
+    <br>
+    <div>
+        <img src="img/img-word-loader.png" alt="Code voorbeeld van het laden van een willekeurig woord">
+    </div>
+    <div><br>
+        <p>Deze functie kiest een willekeurig woord dat je moet raden. Hier's hoe het werkt:</p>
+        <ul>
+            <li>
+                Woorden-bestand ophalen - Maak hiervoor een bestand aan genaamd "words.json" en zet hier een lijst
+                van woorden in.
+            </li>
+            <div class="copyButton">
+                <button onclick="copyCode('jsonFile')">Kopieer</button>
+            </div>
+            <pre id="jsonFile"><code>{
                     "words": [
                         "aanbod",
                         "aangst",
@@ -1030,18 +1017,17 @@
                     ]
                     }
                             </code></pre>
-                <li>Data omzetten - Het zet de json data om naar JSON (een leesbaar formaat)</li>
-                <li>Woordenlijst pakken - Het haalt de array met alle woorden eruit (data.words)</li>
-                <li>Willekeurig woord kiezen - Met Math.random() kiest het een willekeurig getal en met Math.floor()
-                    maakt het ervan een heel getal, zodat het een willekeurig woord uit de lijst kan selecteren</li>
-                <li>Woord in HOOFDLETTERS zetten - Met .toUpperCase() zet het het woord om naar alleen HOOFDLETTERS</li>
-            </ul>
-            <br>
-            <div class="copyButton">
-                <button onclick="copyCode('jsWordLoader')">Kopieer</button>
-            </div>
-            <pre id="jsWordLoader"><code>
-               let word = ''; // This will be replaced by a random word in a real game
+            <li>Data omzetten - Het zet de json data om naar JSON (een leesbaar formaat)</li>
+            <li>Woordenlijst pakken - Het haalt de array met alle woorden eruit (data.words)</li>
+            <li>Willekeurig woord kiezen - Met Math.random() kiest het een willekeurig getal en met Math.floor()
+                maakt het ervan een heel getal, zodat het een willekeurig woord uit de lijst kan selecteren</li>
+            <li>Woord in HOOFDLETTERS zetten - Met .toUpperCase() zet het het woord om naar alleen HOOFDLETTERS</li>
+        </ul>
+        <br>
+        <div class="copyButton">
+            <button onclick="copyCode('jsWordLoader')">Kopieer</button>
+        </div>
+        <pre id="jsWordLoader"><code>ord = ''; // This will be replaced by a random word in a real game
 
 
                 // Load and get random word from words.json
@@ -1061,9 +1047,9 @@
                 // Load the word when page loads
                 loadRandomWord();
                             </code></pre>
-            <i>Plak deze code bovenaan je game.js, onder de `const inputs` regel.</i>
-            <br><br>
-        </div>
+        <i>Plak deze code bovenaan je game.js, onder de `const inputs` regel.</i>
+        <br><br>
+    </div>
     </div>
 
     <div class="infoBlock">
@@ -1077,9 +1063,7 @@
         <div class="copyButton">
             <button onclick="copyCode('cssColorSnippet')">Kopieer</button>
         </div>
-        <pre id="cssColorSnippet"><code>
-        .green {
-            background-color: green;
+        <pre id="cssColorSnippet"><code>         background-color: green;
         }
 
         .orange {
@@ -1094,7 +1078,7 @@
                 de verkeerde positie staat.</li>
         </ul>
         <p>Deze klasses voeg je straks toe met JavaScript. Als een letter correct is, zeg je
-            <code>input.classList.add('green')</code>. Zo weet CSS wat kleur het vakje moet zijn.
+            <code>green')</code>. Zo weet CSS wat kleur het vakje moet zijn.
         </p>
         <div class="infoBlockImage">
             <img src="img/img-kleur-input.png" alt="afbeelding van groene en oranje gekleurde input velden">
@@ -1110,8 +1094,7 @@
         <div class="copyButton">
             <button onclick="copyCode('cssModalSnippet')">Kopieer</button>
         </div>
-        <pre id="cssModalSnippet"><code>
-        /* Modal Styling */
+        <pre id="cssModalSnippet"><code>ling */
         .modal {
           position: fixed;
           top: 0;
@@ -1189,7 +1172,7 @@
             ziet:</p>
         <ul>
             <li><span class="accentText">.modal</span> — Het hele scherm (achtergrond met zwarte overlay).</li>
-            <li><span class="accentText">.modal.hidden</span> — Verbergt het venster met <code>display: none</code>.
+            <li><span class="accentText">.modal.hidden</span> — Verbergt het venster met <code>
             </li>
             <li><span class="accentText">.modal-content</span> — De witte box met de titel, tekst en knoppen.</li>
             <li><span class="accentText">.modal-button</span> — De groene knop (normaal) en hover effect (als je er
@@ -1233,6 +1216,9 @@
         </footer>
 
         <script src=" js/copycode.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
 </body>
 
 </html>

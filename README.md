@@ -1,5 +1,9 @@
 # Wordle Game - New York Times
 
+# Link naar pagina
+
+https://pgmgent-atwork2.github.io/project-1-workshop-start-to-code-wout-maarten/
+
 ## 📝 Projectomschrijving
 
 Dit project is een implementatie van **Wordle**, het populaire woordspel van de New York Times.
